@@ -1,1 +1,221 @@
-<P>Hello</P>
+<!DOCTYPE html>
+<HTML>
+  <Head>
+
+    <!-- highlight buttons and text input in yellow -->
+    <style>
+    input, textarea, select {
+            /* background: #f9f909; */
+            background: #f7fc8a; 
+            color: black;
+            cursor: default;
+        }
+    </style>
+
+
+
+
+    <!-- when clicking on an named anchor, highlight the hyperlinked text -->
+    <style>
+       /* https://css-tricks.com/on-target/ */
+       :target {
+         background: yellow;
+       }
+    </style>
+
+
+
+
+<!-- https://github.com/KaTeX/KaTeX/blob/master/README.md -->
+
+<!-- https://sixthform.info/katex/guide.html -->
+<!-- https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex -->
+<!--
+    <script src="copy-tex.js">
+    <link rel="stylesheet" href="copy-tex.css">
+</script>
+-->
+    <!-- https://github.com/KaTeX/KaTeX/releases/tag/v0.12.0 -->
+    <link rel="stylesheet" href="katex/katex.min.css">
+  	<script src="katex/katex.min.js"></script>
+
+    <!-- https://sixthform.info/katex/smrender.js -->
+  	<script src="smrender.js"></script>
+
+
+    </Head>
+<BODY>
+
+
+<P>
+
+</P>
+<fieldset>
+  <legend>
+    <a name="f1">
+      Formula: a + b = c
+    </a>
+  </legend>
+<P>see formula 4 on page 3 in <a href="">link to paper</a></P>
+<!-- from https://jsfiddle.net/davidThomas/wxhU9/4/ -->
+<input type="text" id="calc1_eq1_var1" name="calc1_eq1_var1" size="4" />
++
+<input type="text" id="calc1_eq1_var2" name="calc1_eq1_var2" size="4" />
+=
+<span id="calc1_result1" name="calc1_r1"></span>
+
+<P>
+<input type="button" value="calculate" onclick="calc1()" />
+</P>
+</fieldset>
+
+
+<hr>
+<P>
+
+<fieldset>
+  <legend>
+    <a name="f2">
+    Formula:
+  </a>
+    <span id="mykatex2">...</span>
+    <script>
+    katex.render("g(x) = e^x + 34", mykatex2);
+    </script>
+  </legend>
+<table>
+  <tr>
+    <td></td>
+    <td><input type="text" id="calc2_eq1_var1" name="calc2_eq1_var1" size="4" /></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>e</td>
+    <td></td>
+    <td>+34 =</td>
+    <td><span id="calc2_result1" name="calc2_r1"></span></td>
+  </tr>
+</table>
+<P>
+<input type="button" value="calculate" onclick="calc2()" />
+</fieldset>
+or
+<fieldset>
+exp(<input type="text" id="calc2_eq1_var1" name="calc2_eq1_var1" size="4" />)+34 =
+<span id="calc2_result1" name="calc2_r1"></span>
+<P>
+<input type="button" value="calculate" onclick="calc2()" />
+
+</fieldset>
+
+
+<hr>
+
+
+<fieldset>
+  <legend>
+    <a name="f3">
+    Formula
+  </a>
+    <!-- https://sixthform.info/katex/guide.html -->
+      <span id="mykatex1">...</span>
+      <script>
+      katex.render("P(x_1, x_2, x_3) = \\frac{1}{1 + (\\exp{(3.22 - 0.334\\ x_1 - 4.06\\ x_2 + 0.708\\ x_3)})}", mykatex1);
+      </script>
+</legend>
+<P>
+Logistic regression equation from <BR><a href="https://pubmed.ncbi.nlm.nih.gov/9468074/">Development and validation of an echocardiographic model for predicting progression of discrete subaortic stenosis in children</a> (1998)
+</p>
+
+  <table border=0>
+    <tr>
+      <td align="center">1 <hr></td>
+      <td rowspan="2"> = <span id="calc3_result1" name="calc3_r1"></span></td>
+    </tr>
+    <tr>
+      <td>1 + exp(3.22
+         - (0.334 * <input type="text" id="calc3_eq1_var1" name="calc3_eq1_var1" size="4" />)
+         - (4.06  * <input type="text" id="calc3_eq1_var2" name="calc3_eq1_var2" size="4" />)
+         + (0.708 * <input type="text" id="calc3_eq1_var3" name="calc3_eq1_var3" size="4" />)
+         )</td>
+    </tr>
+  </table>
+</fieldset>
+<P>
+<input type="button" value="calculate" onclick="calc3()" />
+<hr>
+
+<P>
+  <span id="mykatex3">...</span>
+  <script>
+  katex.render("k = \\frac{a+b}{x^4}", mykatex3);
+  </script>
+
+
+
+
+</BODY>
+</HTML>
+
+<script>
+function calc1() {
+    var textType = Node.textContent ? 'textContent' : 'innerText'; // condition ? if-true : if-false
+    console.log(textType);
+    result = document.getElementById('calc1_result1');
+    num1 = parseFloat(document.getElementById('calc1_eq1_var1').value);
+    if (isNaN(num1)) {
+       result[textType] = "input for first field should be numeric";
+       return result;
+    } else if (num1 < 1){
+       result[textType] = "input for first field should greater than 1";
+       return result;
+    } else if (num1 > 10){
+       result[textType] = "input for first field should less than 10";
+       return result;
+    }
+    num2 = parseFloat(document.getElementById('calc1_eq1_var2').value);
+    if (isNaN(num2) || num2 < 1 || num2 > 10 ||  ! Number.isInteger(num2)) {
+       result[textType] = "input for second field is invalid";
+       return result;
+    }
+    result[textType] = num1 + num2;
+}
+
+function calc2() {
+    var textType = Node.textContent ? 'textContent' : 'innerText'; // condition ? if-true : if-false
+    console.log(textType);
+    result = document.getElementById('calc2_result1');
+    num1 = parseFloat(document.getElementById('calc2_eq1_var1').value);
+    if (isNaN(num1)) {
+       result[textType] = "input for first field should be numeric";
+       return result;
+    } else if (num1 < 1){
+       result[textType] = "input for first field should greater than 1";
+       return result;
+    } else if (num1 > 10){
+       result[textType] = "input for first field should less than 10";
+       return result;
+    }
+    result[textType] = Math.exp(num1) + 34;
+}
+function calc3() {
+    var textType = Node.textContent ? 'textContent' : 'innerText'; // condition ? if-true : if-false
+    console.log(textType);
+    result = document.getElementById('calc3_result1');
+    num1 = parseFloat(document.getElementById('calc3_eq1_var1').value);
+    num2 = parseFloat(document.getElementById('calc3_eq1_var2').value);
+    num3 = parseFloat(document.getElementById('calc3_eq1_var3').value);
+    if (isNaN(num1)) {
+       result[textType] = "input for first field should be numeric";
+       return result;
+    } else if (num1 < 1){
+       result[textType] = "input for first field should greater than 1";
+       return result;
+    } else if (num1 > 10){
+       result[textType] = "input for first field should less than 10";
+       return result;
+    }
+    result[textType] = 1 / (1 + Math.exp(3.22 - 0.334*num1 - 4.06*num2 + 0.708*num3));
+}
+</script>
