@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-
-
     <!-- highlight buttons and text input in yellow -->
     <style>
-    input, textarea, select {
+      input, textarea, select {
             /* background: #f9f909; */
             background: #f7fc8a;
             color: black;
@@ -19,6 +17,12 @@
     </style>
 
 
+<!-- https://www.w3schools.com/howto/howto_js_collapsible.asp -->
+    <style>
+      .content {
+        display: none;
+      }
+    </style>
 
 
     <!-- when clicking on an named anchor, highlight the hyperlinked text -->
@@ -29,14 +33,15 @@
        }
     </style>
 
+
     <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation -->
     <style>
-    input:invalid {
-      border: 2px dashed red;
-    }
-    input:valid {
-  border: 2px solid darkgreen;
-}
+      input:invalid {
+        border: 2px dashed red;
+      }
+      input:valid {
+        border: 2px solid darkgreen;
+      }
     </style>
 
 
@@ -57,62 +62,71 @@
   	<script src="smrender.js"></script>
 
 
-    </Head>
-<BODY>
-<H3 align="center">Cardiology Reference Equations and Calculator</h3>
+  </Head>
+  <BODY>
+    <H3 align="center">Cardiology Reference Equations and Calculator</h3>
 
-<P>
+    <P>&nbsp;</P>
+    <P>
+      <fieldset>
+        <legend>
+          <a name="f1">
+            Formula: a + b = c
+          </a>
+        </legend>
+        <P>see formula 4 on page 3 in <a href="">link to paper</a></P>
+        <!-- from https://jsfiddle.net/davidThomas/wxhU9/4/ -->
+        <input type="text" id="calc1_eq1_var1" name="calc1_eq1_var1" size="4" required pattern="\d+" minlength="1" maxlength="3"/>
+        +
+        <input type="text" id="calc1_eq1_var2" name="calc1_eq1_var2" size="4" required pattern="\d+" minlength="1" maxlength="3"/>
+        =
+        <span id="calc1_result1" name="calc1_r1"></span>
 
-</P>
-<fieldset>
-  <legend>
-    <a name="f1">
-      Formula: a + b = c
-    </a>
-  </legend>
-<P>see formula 4 on page 3 in <a href="">link to paper</a></P>
-<!-- from https://jsfiddle.net/davidThomas/wxhU9/4/ -->
-<input type="text" id="calc1_eq1_var1" name="calc1_eq1_var1" size="4" required pattern="\d+" minlength="1" maxlength="3"/>
-+
-<input type="text" id="calc1_eq1_var2" name="calc1_eq1_var2" size="4" required pattern="\d+" minlength="1" maxlength="3"/>
-=
-<span id="calc1_result1" name="calc1_r1"></span>
+        <P>
+          <input type="button" value="calculate" onclick="calc1()" />
+        </P>
 
-<P>
-<input type="button" value="calculate" onclick="calc1()" />
-</P>
-</fieldset>
+        <button type="button" class="collapsible">Show Javascript used in calculation</button>
+        <div class="content">
+          <div id="form1"></div>
+        </div>
 
+      </fieldset>
+    </P>
+    <hr>
+    <P>
 
-<hr>
-<P>
-
-<fieldset>
-  <legend>
-    <a name="f2">
-    Formula:
-  </a>
-    <span id="mykatex2">...</span>
-    <script>
-    katex.render("g(x) = e^x + 34", mykatex2);
-    </script>
-  </legend>
-<table>
-  <tr>
-    <td></td>
-    <td><input type="text" id="calc2_eq1_var1" name="calc2_eq1_var1" size="4" required/></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>e</td>
-    <td></td>
-    <td>+34 =</td>
-    <td><span id="calc2_result1" name="calc2_r1"></span></td>
-  </tr>
-</table>
+      <fieldset>
+        <legend>
+          <a name="f2">Formula:</a>
+          <span id="mykatex2">...</span>
+          <script>
+            katex.render("g(x) = e^x + 34", mykatex2);
+          </script>
+        </legend>
+        <table>
+          <tr>
+            <td></td>
+            <td><input type="text" id="calc2_eq1_var1" name="calc2_eq1_var1" size="4" required/></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>e</td>
+            <td></td>
+            <td>+34 =</td>
+            <td><span id="calc2_result1" name="calc2_r1"></span></td>
+          </tr>
+        </table>
 <P>
 <input type="button" value="calculate" onclick="calc2()" />
+</P>
+<P>
+<button type="button" class="collapsible">Show Javascript used in calculation</button>
+<div class="content" style="display: none;">
+<div id="form2"></div>
+</div>
+
 </fieldset>
 or
 <fieldset>
@@ -248,8 +262,6 @@ It is further understood that CardioRef shall also have no liability whatsoever 
 This policy is subject to continuous changes. Updated versions will be authorized when available on this website.
 </P>
 
-</BODY>
-</HTML>
 
 <script>
 function calc1() {
@@ -312,3 +324,39 @@ function calc3() {
     result[textType] = 1 / (1 + Math.exp(3.22 - 0.334*num1 - 4.06*num2 + 0.708*num3));
 }
 </script>
+
+<script>
+// https://www.w3schools.com/howto/howto_js_collapsible.asp
+var coll = document.getElementsByClassName("collapsible");
+console.log(coll);
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+<script>
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
+//console.log(calc1.toString());
+
+// https://stackoverflow.com/questions/807878/how-to-make-javascript-execute-after-page-load
+window.addEventListener("load", function(){
+    // https://www.geeksforgeeks.org/how-to-append-data-to-div-element-using-javascript/
+    document.getElementById("form1").innerText += calc1.toString();
+    document.getElementById("form2").innerText += calc2.toString();
+});
+
+</script>
+
+</BODY>
+</HTML>
