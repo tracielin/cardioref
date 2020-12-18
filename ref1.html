@@ -6,10 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
+    <!-- highlight buttons and text input in yellow -->
+    <style>
+      input, textarea, select {
+            /* background: #f9f909; */
+            background: #f7fc8a;
+            color: black;
+            cursor: default;
+        }
+    </style>
+
+
 <!-- https://www.w3schools.com/howto/howto_js_collapsible.asp -->
     <style>
       .content {
         display: none;
+      }
+    </style>
+
+
+    <!-- when clicking on an named anchor, highlight the hyperlinked text -->
+    <style>
+       /* https://css-tricks.com/on-target/ */
+       :target {
+         background: yellow;
+       }
+    </style>
+
+
+    <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation -->
+    <style>
+      input:invalid {
+        border: 2px dashed red;
+      }
+      input:valid {
+        border: 2px solid darkgreen;
       }
     </style>
 
@@ -33,15 +64,14 @@
 
   </Head>
   <BODY>
-    <H3 align="center">"CardioRef" References and Calculators</h3>
+    <H3 align="center">Cardiology Reference Equations and Calculator</h3>
 
-    <a href="ref1.html">Reference Page 1</a>
     <P>&nbsp;</P>
     <P>
       <fieldset>
         <legend>
           <a name="f1">
-            Formula: a + b = c  &nbsp; <a href="#f1">link here</a>
+            Formula: a + b = c
           </a>
         </legend>
         <P>see formula 4 on page 3 in <a href="">link to paper</a></P>
@@ -188,17 +218,17 @@ Licensed under  <a href="https://creativecommons.org/licenses/by-nc/4.0/">Attrib
 </P>
 
 <P>&nbsp;</P>
-<H3 align="Center">Disclaimer of Liability</H3>
+<H3 align="Center">Disclaimer of liability</H3>
 <P style="font-size:75%;">
-Cardiology Reference Calculator ("Cardiology Reference Calculator," "CardioRef," "we," or "us") provides certain medical related software and solutions and systems ("systems"). Our systems are used by healthcare professionals as a training tool to acquire, retain, and enhance their skills.
+Cardiology Reference Calculator ("Cardiology Reference Calculator," "CardioRef," "we," or "us") provides certain medical related software and solutions and systems ("systems"). Our systems are used by healthcare professionals as a training tool to acquire, retain, and enhance their procedural skills.
 </P>
 <P style="font-size:75%;">
 By licensing, viewing, using and/or accessing the system, you acknowledge and agree that the systems provided by CardioRef are
 </P>
 <P style="font-size:75%;">
-(i) specific educational and medical training products and tools; <BR>
+(i) specific educational and medical training products and tools <BR>
 (ii) not certified as a medical device; <BR>
-(iii) not intended for any clinical or diagnostic use; and <BR>
+(iii) not intended for any clinical or diagnostic use and <BR>
 (iv) intended to be used solely for non-commercial, medical training and performance improvement purposes. <BR>
 You further acknowledge and agree that at all times you will use and access the system <BR>
 (x) solely in connection with such medical training and performance improvement purposes; <BR>
@@ -220,7 +250,7 @@ CardioRef makes no representation or warranties that the system and the medical 
 (b) is error-free, complete, true, accurate, up to date and/or non-misleading. Your use of the system is with full knowledge and awareness that you waive any claim you may have against CardioRef for reliance on any information or training presented through the system.
 </P>
 <P>
-<I><B>Limitations on Liability</B></I>
+<I><B>Limitations on liability</B></I>
 </P>
 <P style="font-size:75%;">
 In no event will CardioRef be liable for any personal injury loss of use, loss of profit, interruption of business, or any indirect, special, incidental, punitive or consequential damages of any kind (including lost profits), regardless of the form of action, whether in contract, tort (including negligence), strict product liability, or otherwise, even if CardioRef has been advised or should have been aware of the possibility of such damages. In no event will CardioRef’s liability to you for any claim, whether in contract, tort or any other theory of liability, exceed the purchase price of the system paid by you.
@@ -231,6 +261,7 @@ It is further understood that CardioRef shall also have no liability whatsoever 
 <P style="font-size:75%;">
 This policy is subject to continuous changes. Updated versions will be authorized when available on this website.
 </P>
+
 
 <script>
 function calc1() {
@@ -317,6 +348,7 @@ for (i = 0; i < coll.length; i++) {
 <script>
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 //console.log(calc1.toString());
+
 // https://stackoverflow.com/questions/807878/how-to-make-javascript-execute-after-page-load
 window.addEventListener("load", function(){
     // https://www.geeksforgeeks.org/how-to-append-data-to-div-element-using-javascript/
@@ -325,5 +357,6 @@ window.addEventListener("load", function(){
 });
 
 </script>
+
 </BODY>
 </HTML>
