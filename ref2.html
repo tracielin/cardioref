@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<HTML>
+  <Head>
+
+    <!-- defines the default zoom for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- highlight buttons and text input in yellow -->
+    <style>
+      input, textarea, select {
+            /* background: #f9f909; */
+            background: #f7fc8a;
+            color: black;
+            cursor: default;
+        }
+    </style>
+
+<!-- https://www.w3schools.com/howto/howto_js_collapsible.asp -->
+    <style>
+      .content {
+        display: none;
+      }
+    </style>
+
+    <!-- when clicking on an named anchor, highlight the hyperlinked text -->
+    <style>
+       /* https://css-tricks.com/on-target/ */
+       :target {
+         background: yellow;
+       }
+    </style>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation -->
+    <style>
+      input:invalid {
+        border: 2px dashed red;
+      }
+      input:valid {
+        border: 2px solid darkgreen;
+      }
+    </style>
+
+
+<!-- https://github.com/KaTeX/KaTeX/blob/master/README.md -->
+
+<!-- https://sixthform.info/katex/guide.html -->
+<!-- https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex -->
+<!--
+    <script src="copy-tex.js">
+    <link rel="stylesheet" href="copy-tex.css">
+</script>
+-->
+    <!-- https://github.com/KaTeX/KaTeX/releases/tag/v0.12.0 -->
+    <link rel="stylesheet" href="katex/katex.min.css">
+  	<script src="katex/katex.min.js"></script>
+
+    <!-- https://sixthform.info/katex/smrender.js -->
+  	<script src="smrender.js"></script>
+
+
+  </Head>
+  <BODY>
+    <H3 align="center">"CardioRef"</h3>
+
+    <P>&nbsp;</P>
+    <a href="index.html">Back to Main Page</a>
+     <P>&nbsp;</P>
+    <P>
+      <fieldset>
+        <legend>
+          <a name="PDA Management">
+            PDA Management in the Premature Infant
+          </a>
+        </legend>
+        <P>Source: Figure 4 in <a href="">link to paper</a></P>
+        <a href="PDA_preterm.html">PDA Management in Premature Infant</a>       
+        
+        <button type="button" class="collapsible">Show Javascript used in calculation</button>
+        <div class="content">
+          <div id="form1"></div>
+        </div>
+
+      </fieldset>
+    </P>
+    <hr>
+    <P>
+
+      <fieldset>
+        <legend>
+          <a name="f2">Formula:</a>
+          <span id="mykatex2">...</span>
+          <script>
+            katex.render("g(x) = e^x + 34", mykatex2);
+          </script>
+        </legend>
+        <table>
+          <tr>
+            <td></td>
+            <td><input type="text" id="calc2_eq1_var1" name="calc2_eq1_var1" size="4" required/></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>e</td>
+            <td></td>
+            <td>+34 =</td>
+            <td><span id="calc2_result1" name="calc2_r1"></span></td>
+          </tr>
+        </table>
+<P>
+<input type="button" value="calculate" onclick="calc2()" />
+</P>
+<P>
+<button type="button" class="collapsible">Show Javascript used in calculation</button>
+<div class="content" style="display: none;">
+<div id="form2"></div>
+</div>
+
+</fieldset>
+or
+<fieldset>
+exp(<input type="text" id="calc2_eq1_var1" name="calc2_eq1_var1" size="4" required/>)+34 =
+<span id="calc2_result1" name="calc2_r1"></span>
+<P>
+<input type="button" value="calculate" onclick="calc2()" />
+
+</fieldset>
+
+
+<hr>
+
+
+<fieldset>
+  <legend>
+    <a name="f3">
+    Formula
+  </a>
+    <!-- https://sixthform.info/katex/guide.html -->
+      <span id="mykatex1">...</span>
+      <script>
+      katex.render("P(x_1, x_2, x_3) = \\frac{1}{1 + (\\exp{(3.22 - 0.334\\ x_1 - 4.06\\ x_2 + 0.708\\ x_3)})}", mykatex1);
+      </script>
+</legend>
+<P>
+Logistic regression equation from <BR><a href="https://pubmed.ncbi.nlm.nih.gov/9468074/">Development and validation of an echocardiographic model for predicting progression of discrete subaortic stenosis in children</a> (1998)
+</p>
+
+  <table border=0>
+    <tr>
+      <td align="center">1 <hr></td>
+      <td rowspan="2"> = <span id="calc3_result1" name="calc3_r1"></span></td>
+    </tr>
+    <tr>
+      <td>1 + exp(3.22
+         - (0.334 * <input type="text" id="calc3_eq1_var1" name="calc3_eq1_var1" size="4" required/>)
+         - (4.06  * <input type="text" id="calc3_eq1_var2" name="calc3_eq1_var2" size="4" required/>)
+         + (0.708 * <input type="text" id="calc3_eq1_var3" name="calc3_eq1_var3" size="4" required/>)
+         )</td>
+    </tr>
+  </table>
+  <P>
+  <input type="button" value="calculate" onclick="calc3()" />
+</fieldset>
+<hr>
+
+<fieldset>
+<legend>
+  <a name="f4">
+  Formula
+</a>
+  <span id="mykatex3">...</span>
+  <script>
+  katex.render("k = \\frac{a+b}{x^4}", mykatex3);
+  </script>
+</legend>
+<P>
+From a research paper
+</P>
+<table border=0>
+  <tr>
+    <td colspan=2><input type="text" id="calc4_eq1_var1" name="calc4_eq1_var1" size="4" required/> +
+                  <input type="text" id="calc4_eq1_var2" name="calc4_eq1_var2" size="4" required/>
+    <hr></td>
+    <td rowspan="3"> = <span id="calc4_result1" name="calc4_r1"></span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td align="right"><input type="text" id="calc4_eq1_var3" name="calc4_eq1_var3" size="4" required/></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</fieldset>
+<hr>
+
+<P align="center">
+
+Contact us with <a href="mailto:cardioref@gmail.com">feedback, questions, suggestions</a>
+</P>
+
+<P>&nbsp;</P>
+
+<P align="center">
+Licensed under  <a href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</a>
+</P>
+
+<P>&nbsp;</P>
+<H3 align="Center">Disclaimer of liability</H3>
+<P style="font-size:75%;">
+Cardiology Reference Calculator ("Cardiology Reference Calculator," "CardioRef," "we," or "us") provides certain medical related software and solutions and systems ("systems"). Our systems are used by healthcare professionals as a training tool to acquire, retain, and enhance their procedural skills.
+</P>
+<P style="font-size:75%;">
+By licensing, viewing, using and/or accessing the system, you acknowledge and agree that the systems provided by CardioRef are
+</P>
+<P style="font-size:75%;">
+(i) specific educational and medical training products and tools <BR>
+(ii) not certified as a medical device; <BR>
+(iii) not intended for any clinical or diagnostic use and <BR>
+(iv) intended to be used solely for non-commercial, medical training and performance improvement purposes. <BR>
+You further acknowledge and agree that at all times you will use and access the system <BR>
+(x) solely in connection with such medical training and performance improvement purposes; <BR>
+(xi) in compliance will all applicable laws and regulations; and <BR>
+(xii) in accordance with any user documentation, instruction manuals, guides and/or requirements we provide to you.  You that at no time shall any system be used to <BR>
+(xii) diagnose, treat or cure a human being’s condition or in a life-saving situation; <BR>
+(xiii) support professional medical decisions, diagnosis or treatments, or <BR>
+(ix) replace any diagnosis, recommendation, advice, treatment or decision by an appropriately trained and licensed physician. Use of the system with real subjects could cause serious injury or death.
+</P>
+<P>
+<I><B>Disclaimers</B></I>
+</P>
+<P style="font-size:75%;">
+CardioRef makes no representations or warranties and shall not be responsible for the competency of any person who may receive educational information and/or medical training provided through or based on the system or for the exercise of his or her skills by such person after completion of any training, courses or curriculum using the system. Supplier does not guarantee that any person receiving educational information and/or medical training from the system will achieve any particular skill level or the necessary proficiency to qualify for any license, certificates or ratings issued by any regulatory agency or government authority.
+</P>
+<P style="font-size:75%;">
+CardioRef makes no representation or warranties that the system and the medical information and training provided on the system: <BR>
+(a) will be constantly available, or available at all; or <BR>
+(b) is error-free, complete, true, accurate, up to date and/or non-misleading. Your use of the system is with full knowledge and awareness that you waive any claim you may have against CardioRef for reliance on any information or training presented through the system.
+</P>
+<P>
+<I><B>Limitations on liability</B></I>
+</P>
+<P style="font-size:75%;">
+In no event will CardioRef be liable for any personal injury loss of use, loss of profit, interruption of business, or any indirect, special, incidental, punitive or consequential damages of any kind (including lost profits), regardless of the form of action, whether in contract, tort (including negligence), strict product liability, or otherwise, even if CardioRef has been advised or should have been aware of the possibility of such damages. In no event will CardioRef’s liability to you for any claim, whether in contract, tort or any other theory of liability, exceed the purchase price of the system paid by you.
+</P>
+<P style="font-size:75%;">
+It is further understood that CardioRef shall also have no liability whatsoever concerning damages arising out of or relating to unauthorized access, use and/or alteration or destruction, by any third party, including any users, of the system or any data contained thereon or created by the system or your computer system.
+</P>
+<P style="font-size:75%;">
+This policy is subject to continuous changes. Updated versions will be authorized when available on this website.
+</P>
+
+
+<script>
+function calc1() {
+    var textType = Node.textContent ? 'textContent' : 'innerText'; // condition ? if-true : if-false
+    console.log(textType);
+    result = document.getElementById('calc1_result1');
+    num1 = parseFloat(document.getElementById('calc1_eq1_var1').value);
+    if (isNaN(num1)) {
+       result[textType] = "input for first field should be numeric";
+       return result;
+    } else if (num1 < 1){
+       result[textType] = "input for first field should greater than 1";
+       return result;
+    } else if (num1 > 10){
+       result[textType] = "input for first field should less than 10";
+       return result;
+    }
+    num2 = parseFloat(document.getElementById('calc1_eq1_var2').value);
+    if (isNaN(num2) || num2 < 1 || num2 > 10 ||  ! Number.isInteger(num2)) {
+       result[textType] = "input for second field is invalid";
+       return result;
+    }
+    result[textType] = num1 + num2;
+}
+
+function calc2() {
+    var textType = Node.textContent ? 'textContent' : 'innerText'; // condition ? if-true : if-false
+    console.log(textType);
+    result = document.getElementById('calc2_result1');
+    num1 = parseFloat(document.getElementById('calc2_eq1_var1').value);
+    if (isNaN(num1)) {
+       result[textType] = "input for first field should be numeric";
+       return result;
+    } else if (num1 < 1){
+       result[textType] = "input for first field should greater than 1";
+       return result;
+    } else if (num1 > 10){
+       result[textType] = "input for first field should less than 10";
+       return result;
+    }
+    result[textType] = Math.exp(num1) + 34;
+}
+function calc3() {
+    var textType = Node.textContent ? 'textContent' : 'innerText'; // condition ? if-true : if-false
+    console.log(textType);
+    result = document.getElementById('calc3_result1');
+    num1 = parseFloat(document.getElementById('calc3_eq1_var1').value);
+    num2 = parseFloat(document.getElementById('calc3_eq1_var2').value);
+    num3 = parseFloat(document.getElementById('calc3_eq1_var3').value);
+    if (isNaN(num1)) {
+       result[textType] = "input for first field should be numeric";
+       return result;
+    } else if (num1 < 1){
+       result[textType] = "input for first field should greater than 1";
+       return result;
+    } else if (num1 > 10){
+       result[textType] = "input for first field should less than 10";
+       return result;
+    }
+    result[textType] = 1 / (1 + Math.exp(3.22 - 0.334*num1 - 4.06*num2 + 0.708*num3));
+}
+</script>
+
+<script>
+// https://www.w3schools.com/howto/howto_js_collapsible.asp
+var coll = document.getElementsByClassName("collapsible");
+console.log(coll);
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+<script>
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
+//console.log(calc1.toString());
+
+// https://stackoverflow.com/questions/807878/how-to-make-javascript-execute-after-page-load
+window.addEventListener("load", function(){
+    // https://www.geeksforgeeks.org/how-to-append-data-to-div-element-using-javascript/
+    document.getElementById("form1").innerText += calc1.toString();
+    document.getElementById("form2").innerText += calc2.toString();
+});
+
+</script>
+
+</BODY>
+</HTML>
