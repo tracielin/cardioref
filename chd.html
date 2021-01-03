@@ -111,19 +111,24 @@
  font-weight:bold;
  }
 
-.buttonsub{
+.button {
   padding: 10px;
-  text-align: left;
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family:Arial;
+  font-size: 16px;
   font-weight: bold;
-  margin: 4px;
+  margin: 4px 2px;
   cursor: pointer;
-  border: none;
+  border: 2px solid #737373
+}
+
+.buttonsub {
   background-color: #8fb2bd;
   border: none;
-  color: white;
-  width: 100%;} 
+  color: #333333;
+  width: 75%;}
 </style>
 
 <body>
@@ -144,14 +149,14 @@
   <a href="exercise.html">Exercise</a>
 </div>
 
-<div class="main">
-  <br></br>
+  
   
  <button type="button" class="buttonheader">Congenital Heart Disease</button>
  <button type="button" class="collapsible">Patent Ductus Arteriosus</button>
-<div class="buttonsub" data-toggle="false">
+<div class="content">
 <p>
-   <a href="PDA_preterm.html">PDA Management in Preterm Infants</a>
+   <a href="PDA_preterm.html" class="button buttonsub">PDA Management in Preterm Infants</a>
+ <a href="PDA_preterm.html" class="button buttonsub">Another PDA Link</a>
  </p>
 </div>
 <button type="button" class="collapsible">Single Ventricle</button>
