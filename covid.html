@@ -1,10 +1,189 @@
-
 <!DOCTYPE html>
 <HTML>
 
 <!-- defines the default zoom for mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-Covid-19 stuff will go here
+<style>
+ body {margin:0;}
 
-</HTML>
+/* Floating Header */
+.topbar {
+  overflow: hidden;
+  background-color: #347;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topbar a {
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #a3a3c2;
+}
+
+.topbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Navigation menu bar */
+.navbar {
+  overflow: hidden;
+  background-color: #347;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 7px 17px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #a3a3c2;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+  
+.collapsible {
+  background-color: #5e91a1;
+  color: white;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+ font-size: 16px;
+ font-weight:bold;
+}
+
+.active, .collapsible:hover {
+  background-color: #555555;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  color: #ffffff;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+} 
+ 
+.content {
+  padding: 18px;
+ font-size: 14px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+ }
+ 
+.buttonheader{
+  background-color: #f9b401;
+  color: white;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+ font-size: 16px;
+ font-weight:bold;
+ }
+
+.button {
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family:Arial;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 2px solid #737373
+}
+
+.buttonsub {
+  background-color: #8fb2bd;
+  border: none;
+  color: #333333;
+  width: 80%;}
+</style>
+
+<body>
+<div class="topbar">
+  <a href="index.html">Pedi CardioRef</a>
+  </div>
+  
+  
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="chd.html">CHD</a>
+  <a href="acquired.html">Acquired</a>
+  <a href="ep.html">&nbsp EP &nbsp</a>
+  <a href="cath.html">Cath</a>
+  <a href="achd.html">ACHD</a>
+  <a href="sports.html">Sports</a>
+  <a href="covid.html">COVID-19</a>
+  <a href="exercise.html">Exercise</a>
+</div>
+
+  
+<br>  
+ <button type="button" class="buttonheader">COVID-19</button>
+ <button type="button" class="collapsible">Return-to-Play</button>
+ <div class="content"> 
+   <a href="covid_rtp_jama2020.html" class="button buttonsub">First COVID RTP Resource</a>
+</div>
+<button type="button" class="collapsible">Another COVID topic category</button>
+<div class="content">
+  <p>   
+   <a href="covid.html" class="button buttonsub">One covid resource page</a>
+ </p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>  
+  
+  
+</div>
+
+  
+  
+</body>
+</html>
