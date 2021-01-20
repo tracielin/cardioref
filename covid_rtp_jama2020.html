@@ -17,22 +17,21 @@
   font-size: 14px;
   text-align:center;
   }
- 
-/* Floating Header */
+ /* Floating Header */
 .topbar {
-  overflow: hidden;
   background-color: #347;
-  position: fixed;
   top: 0;
-  width: 100%;
 }
 
 .topbar a {
   float: center;
-  display: block;
+  display: inline-block;
   color: #f2f2f2;
   text-align: center;
-  padding: 10px;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-decoration: none;
   font-size: 16px;
   font-family: Arial;
@@ -48,7 +47,6 @@
 
 /* Navigation menu bar */
 .navbar {
-  overflow: hidden;
   background-color: #347;
   position: fixed;
   bottom: 0;
@@ -56,8 +54,7 @@
 }
 
 .navbar a {
-  float: left;
-  display: block;
+  display: inline-block;
   color: #f2f2f2;
   text-align: center;
   padding: 7px 17px;
@@ -143,13 +140,14 @@
 </style>
 
 <body>
-<div class="topbar">
+<div class="topbar" align="center">
+  <a href="index.html"><i class="fas fa-bars"></i></a>
   <a href="index.html">Pedi CardioRef</a>
- <a href="mailto:?subject=COVID-19 Return To Play (Resource shared via CardioRef)"><i class="fas fa-share-square"></i></a>
+  <a href="mailto:?subject=COVID-19 Return To Play (Resource shared via CardioRef)"><i class="fas fa-share-square"></i></a>
   </div>
   
   
-<div class="navbar">
+<div class="navbar" align="center">
   <a href="index.html">Home</a>
   <a href="chd.html">CHD</a>
   <a href="acquired.html">Acquired</a>
