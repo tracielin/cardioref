@@ -96,6 +96,15 @@
   border: none;
   color: #333333;
   width: 80%;}
+  
+  
+div {
+  width: 95%;
+  padding: 5px;
+  border: 3px solid gray;
+  margin: 0;
+}
+
 </style>
 
 <body>
@@ -118,21 +127,58 @@
 
   <br><br>
   
- <button type="button" class="buttonheader">Sports Participation Recommendations</button>
+ <button type="button" class="buttonheader">Sports Participation Recommendations (Circulation 2015)</button>
  
-  Can my patient with
-  
-  participate in 
-  
-    <p><span style="font-size:13px"><u>Reference:</u>
-  <br><span style="font-size:13px;font-weight: bold;"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities.
+
+
+<label>Can my patient with</label>
+<select name="disease" id="dz" class="demoInputBox" onChange="getState();">
+<option value="">Select Disease</option>
+<option value="01">Hypertrophic Cardiomyopathy </option>
+<option value="02">LV Non-Compaction </option>
+<option value="03">Dilated or Restrictive Cardiomyopathy </option>
+</select>
+
+<label>participate in</label>
+<select name="sport" id="spt" class="demoInputBox"  onChange="getState();">
+<option value="">Select Sport</option>
+<option value="01"> Soccer</option>
+<option value="02"> Running, long distance</option>
+<option value="03"> Field hockey</option>
+</select>?<br>
+What do I need to know to make that assessment?
+
+<p><br></p>
+<div id="content">(Make Selection Above for Answer)</div>
+
+<p></p><br><br>
+<p> <span style="font-size:13px;font-weight: bold;">Reference: <i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities.
     A Scientific Statement From the AHA and ACC.</i>
-    <span style="font-size:12px;font-weight:"><i>Circulation 2015</i>
-  
-  
-</div>
+    <span style="font-size:12px;font-weight:"><i>Circulation 2015</i></p>
 
   
-  
 </body>
+  
+<script>
+  var data = {
+    "0101": "Answer",
+    "0102": "Stuff about HCM here<p>line 2</p><br>line3",
+    "0103": "<b>Stuff about LV non-compaction here</b><p>More line 2 stuff</p>"
+};
+
+
+function getState() {
+    var disease = document.getElementById("dz").value;
+    var sport = document.getElementById("spt").value;
+    if(disease && sport) {
+      console.log(disease);
+      console.log(sport);
+      console.log(disease+sport);
+      combo=disease+sport;
+   
+     document.getElementById("content").innerHTML       = data[combo];
+      }
+}
+  </script>
+  
 </html>
