@@ -11,6 +11,10 @@
 <style>
  body {margin:0; font-family: sans-serif; }
   
+p.indent {
+  padding-left: 10px;
+} 
+  
 /* Floating Header */
 .topbar {
   overflow: hidden;
@@ -138,34 +142,34 @@ select {
 
 
 
-<label><b>By the ACC/AHA 2015 guidelines, should my patient with</label>
+<p class="indent"><label><b>By the ACC/AHA 2015 guidelines, should my patient with</label>
 <select name="disease" id="dz" class="demoInputBox" onChange="getState();">
 <option value="">Select Disease</option>
 <option value="HCM">Hypertrophic Cardiomyopathy </option>
 <option value="LVNC">LV Non-Compaction </option>
 <option value="DRCardio">Dilated or Restrictive Cardiomyopathy </option>
-</select>
+  </select></p>
 
-<label>participate in</label>
+<p class="indent"><label>participate in</label>
 <select name="sport" id="spt" class="demoInputBox"  onChange="getState();">
 <option value="">Select Sport</option>
 <option value="_Soccer"> Soccer</option>
 <option value="_RunLong"> Running, long distance</option>
 <option value="_FHock"> Field hockey</option>
 <option value="_Yoga">Yoga, Bowling, or Golf</option>
-<option value="_Cricket">Cricket, Curling, or Riflery</option>
-  </select>?</b><p>
+  <option value="_Cricket">Cricket, Curling, or Riflery</option></p>
+  </select>?</b><p class="indent">
   What do I need to know to make that assessment?</p>
 
 
-<p><br></p>
+<p class="indent"><br></p>
 <div id="answer">Make selections above</div>
   
   
   
 <!--Reference-->
 <p></p><br><br>
-<p> <span style="font-size:13px;font-weight: bold;">Reference: <a href="https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000000236"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities.
+<p class="indent"> <span style="font-size:13px;font-weight: bold;">Reference: <a href="https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000000236"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities.
   A Scientific Statement From the AHA and ACC.</i></a>
     <span style="font-size:12px;font-weight:"><i>Circulation 2015</i></p>
   
