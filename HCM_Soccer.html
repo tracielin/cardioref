@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- defines the default zoom for mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8">
+ <title>Sports Participation Selector Guide</title>
+</head>
+ 
+<style>
+ body {margin:0; font-family: sans-serif; }
+  
+/* Floating Header */
+.topbar {
+  overflow: hidden;
+  background-color: #347;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topbar a {
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #a3a3c2;
+}
+
+.topbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Navigation menu bar */
+.navbar {
+  background-color: #347;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 7px 17px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #a3a3c2;
+}
+
+ .navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+  
+
+.buttonheader{
+  background-color: #004b62;
+  color: white;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+ font-size: 16px;
+ font-weight:bold;
+ }
+
+.button {
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family:Arial;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 2px solid #737373
+}
+
+.buttonsub {
+  background-color: #8fb2bd;
+  border: none;
+  color: #333333;
+  width: 80%;}
+  
+div {
+  width: 160px;
+  padding: 5px;
+  border: 3px solid gray;
+  background-color: #CDCDCD;
+  margin: 0;
+  text-align: center;
+}
+
+select {
+   font-size: 16px;
+}
+
+</style>
+
+<body>
+<div class="topbar">
+  <a href="index.html">Pedi CardioRef</a>
+  </div>
+  
+  
+<div class="navbar" align="center">
+  <a href="index.html">Home</a>
+  <a href="chd.html">CHD</a>
+  <a href="acquired.html">Acquired</a>
+  <a href="ep.html">&nbsp EP &nbsp</a>
+  <a href="cath.html">Cath</a>
+  <a href="achd.html">ACHD</a>
+  <a href="sports.html">Sports</a>
+  <a href="covid.html">COVID-19</a>
+  <a href="exercise.html">Exercise</a>
+</div>
+
+  <br><br><br>
+  
+ <button type="button" class="buttonheader">Sports Participation Recommendations (Circulation 2015)</button>
+ 
+  <p></p>
+
+
+
+<label><b>By the ACC/AHA 2015 guidelines, should my patient with</label>
+<select name="disease" id="dz" class="demoInputBox" onChange="getState();">
+<option value="">Select Disease</option>
+<option value="HCM">Hypertrophic Cardiomyopathy </option>
+<option value="LVNC">LV Non-Compaction </option>
+<option value="DRCardio">Dilated or Restrictive Cardiomyopathy </option>
+</select>
+
+<label>participate in</label>
+<select name="sport" id="spt" class="demoInputBox"  onChange="getState();">
+<option value="">Select Sport</option>
+<option value="_Soccer"> Soccer</option>
+<option value="_RunLong"> Running, long distance</option>
+<option value="_FHock"> Field hockey</option>
+<option value="_Yoga">Yoga, Bowling, or Golf</option>
+<option value="_Cricket">Cricket, Curling, or Riflery</option>
+  </select>?</b><p>
+  What do I need to know to make that assessment?</p>
+
+
+<p><br></p>
+Here is the answer for HCM soccer.
+  
+<div class=\"needtoknow\"><b><u>Need to know:</u></b><br>-Symptoms<br>-Clinical manifestations (LVH on echo or MRI)</div><p></p>\
+\
+<div class=\"answerbox2\"><b><u>Answer:</u></b><p><u>If</u> patient has clinical expression or disease phenotype of <b>LV hypertrophy</b><br>... should NOT participate in most competitive sports, with the exception of low intensity (class IA sports)<br><b><i>Soccer is a Class IC sport and therefore inadvisable.</b></i></p><p>Exception: If patient is HCM genotype-positive but:<br>-Asymptomatic<br>-Without evidence of LV hypertrophy by 2D echo and CMR<br>... Participation in competitive athletics is reasonable, particularly in the absence of a family hx of HCM-related sudden death\
+\
+<hr><b>What sports <u>can</u> my patient participate in?</b></p>\
+HCM patients with evidence of LVH may consider Class IA sports: Bowling, Cricket, Curling, Golf, Riflery, Yoga.</div>\
+\
+<p></p><div class=\"notrecommend\"><b><u>FYI:</b></u><p>The following are NOT recommended:<br>-<b>Beta Blocker for sport:</b> Pharmacologic agents to control cardiac-related symptoms or ventricular tachyarrhythmias should NOT be administered for the <u>sole</u> purpose of permitting participation in high-intensity sports. Notably, such drugs may also be inconsistent with maximal physical performance in most sports<br>-<b>Prophylactic ICD:</b> Should not be placed in athletes with HCM for the <u>sole</u> or primary purpose of permitting participation in high-intensity sports competition because of the possibility of device-related complications. ICD indications for competitive athletes with HCM should not differ from those in nonathlete patients with HCM.</div></p>
+  
+  
+  
+<!--Reference-->
+<p></p><br><br>
+<p> <span style="font-size:13px;font-weight: bold;">Reference: <a href="https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000000236"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities.
+  A Scientific Statement From the AHA and ACC.</i></a>
+    <span style="font-size:12px;font-weight:"><i>Circulation 2015</i></p>
+  
+</body>
+  
+<script>
+var data = {
+    "HCM_Soccer": "<a href=\"HCM_Soccer.html\">Show Answer</a>" ,
+    "HCM_RunLong": "<a href=\"HCM_RunLong.html\">Show Answer</a>",
+    "HCM_FHock": "<a href=\"HCM_FHock.html\">Show Answer</a>",
+    "HCM_Yoga": "<a href=\"HCM_Yoga.html\">Show Answer</a> "
+  ,
+  
+};
+
+
+function getState() {
+    var disease = document.getElementById("dz").value;
+    var sport = document.getElementById("spt").value;
+    if(disease && sport) {
+      console.log(disease);
+      console.log(sport);
+      console.log(disease+sport);
+      combo=disease+sport;
+
+document.getElementById("answer").innerHTML = data[combo];
+    
+    }
+}
+  </script>
+  
+</html>
