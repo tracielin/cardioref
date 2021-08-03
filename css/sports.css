@@ -127,9 +127,9 @@ select {
 }
 
 #question {
+      text-align: center;
       background-color: #FFD93A;
       margin-right: 10px;
       margin-left: 10px;
-      outline-color: #000000;
     }  
   
