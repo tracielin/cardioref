@@ -7,7 +7,7 @@
   background-color: #347;
   position: fixed;
   top: 0;
-width:100%;
+  width:100%;
 }
 
 .topbar a {
@@ -60,12 +60,12 @@ width:100%;
   background-color: #004b62;
   color: white;
   padding: 14px;
-width:100%;
+  width:100%;
   border: none;
   text-align: left;
   outline: none;
- font-size: 16px;
- font-weight:bold;
+  font-size: 16px;
+  font-weight:bold;
  }
 
 .button {
@@ -96,7 +96,6 @@ div {
 
 .notrecommend
 {
-  width:100%;
   border: 2px solid #FE686F;
   background-color: #FFCECF;
   margin: 0;
@@ -108,16 +107,9 @@ div {
   background-color: #CCD4EA;
   margin: 0;
 }
+
 .answerbox1
 {
-  width:100%;
-  border: 2px solid #89D465;
-  margin: 0;
-}
-
-.answerbox2
-{
-  width:100%;
   border: 2px solid #5FB934;
   background-color: #B7E5A1;
   margin: 0;
