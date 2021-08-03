@@ -88,45 +88,36 @@ width:100%;
   width: 80%;}
   
 div {
+  margin-right: 10px;
+  margin-left: 10px ;
   padding: 5px;
-  border: 3px solid #DCDCDC;
-  background-color: #CDCDCD;
   margin: 0;
 }
+
 .notrecommend
 {
-  margin-right: 10px;
-  margin-left:10px;
-    width:100%;
-  padding: 5px;
-  border: 1px solid #c70000;
+  width:100%;
+  border: 1px solid #FE686F;
+  background-color: #FFCECF;
   margin: 0;
 }
 
 .needtoknow
 {
-  margin-right: 10px;
-  margin-left:10px;
-  padding: 5px;
-  border: 1px solid blue;
+  border: 1px solid #455EA4;
+  background-color: #96A6D3;
   margin: 0;
 }
 .answerbox1
 {
-  margin-right: 10px;
-  margin-left:10px;
   width:100%;
-  padding: 5px;
   border: 3px solid #89D465;
   margin: 0;
 }
 
 .answerbox2
 {
-  margin-right: 10px;
-  margin-left:10px;
-    width:100%;
-  padding: 5px;
+  width:100%;
   border: 2px solid #5FB934;
   background-color: #B7E5A1;
 }
