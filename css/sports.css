@@ -97,21 +97,21 @@ div {
 .notrecommend
 {
   width:100%;
-  border: 1px solid #FE686F;
+  border: 2px solid #FE686F;
   background-color: #FFCECF;
   margin: 0;
 }
 
 .needtoknow
 {
-  border: 1px solid #455EA4;
+  border: 2px solid #455EA4;
   background-color: #CCD4EA;
   margin: 0;
 }
 .answerbox1
 {
   width:100%;
-  border: 3px solid #89D465;
+  border: 2px solid #89D465;
   margin: 0;
 }
 
@@ -120,10 +120,11 @@ div {
   width:100%;
   border: 2px solid #5FB934;
   background-color: #B7E5A1;
+  margin: 0;
 }
 
 select {
-   font-size: 16px;
+  font-size: 16px;
 }
 
 #question {
