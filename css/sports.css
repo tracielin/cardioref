@@ -99,7 +99,7 @@ div {
   margin-left:10px;
     width:100%;
   padding: 5px;
-  border: 1px solid red;
+  border: 1px solid #c70000;
   margin: 0;
 }
 
@@ -117,7 +117,7 @@ div {
   margin-left:10px;
   width:100%;
   padding: 5px;
-  border: 3px solid gray;
+  border: 3px solid #89D465;
   margin: 0;
 }
 
@@ -127,8 +127,8 @@ div {
   margin-left:10px;
     width:100%;
   padding: 5px;
-  border: 2px solid darkblue;
-  background-color: lightblue;
+  border: 2px solid #5FB934;
+  background-color: #B7E5A1;
 }
 
 select {
@@ -139,6 +139,6 @@ select {
       background-color: #FFD93A;
       margin-right: 10px;
       margin-left: 10px;
-      outline-color: black;
+      outline-color: #000000;
     }  
   
