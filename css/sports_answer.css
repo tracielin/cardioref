@@ -2,10 +2,6 @@
 
 body {margin:0; font-family: sans-serif; }
 
-p.indent{
-padding-left:10px;
- }
-
 p.selections{
  padding-left:10px;
  font-size:16px;
@@ -18,27 +14,17 @@ p.selections{
  line-height:7px;
  }
 
-.buttonheader{
+ .guideline {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #737373;
  background-color: #004b62;
  color: white;
  padding: 14px;
  width: 100%;
- border: none;
  text-align: left;
- outline: none;
-font-size: 16px;
-font-weight:bold;
 }
-
-
-
-
-.buttonsub {
- background-color: #8fb2bd;
- border: none;
- color: #333333;
- width: 80%;}
-
 
 select {
   font-size: 16px;
@@ -48,7 +34,6 @@ select {
 
 /* Floating Header */
 .topbar {
- overflow: hidden;
  background-color: #347;
  position: left;
  top: 0;
@@ -105,46 +90,88 @@ select {
  color: black;
 }
 
-.button {
- padding: 10px;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-family:Arial;
- font-size: 16px;
- font-weight: bold;
- margin: 4px 2px;
- cursor: pointer;
- border: 2px solid #737373
-}
 
-.notrecommend
-{
- border: 2px solid #FE686F;
- background-color: #FFCECF;
- margin: 0;
+.sectiontitle {
+  font-weight: bold;
+  font-size: 1em;
 }
-
-.needtoknow
-{
- border: 2px solid #455EA4;
- background-color: #CCD4EA;
- margin: 0;
+.sectiontitle_notrec {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
 }
-
-.answerbox1
-{
- border: 2px solid #455EA4;
- background-color: #CCD4EA;
- margin: 0;
-}
-
 
 #question {
      text-align: center;
      line-height: 140%;
      background-color: #FFD93A;
-     margin-right: 10px;
-     margin-left: 10px;
      font-size: 20px;
    }
+
+#needtoknow
+{
+border: 2px solid #455EA4;
+background-color: #CCD4EA;
+ padding:2px 20px;
+ /* text-align: center; */
+ margin: auto;
+ width: 380px;
+ display: block;
+}
+#answer{
+  display: table;
+  width:100%;
+  padding: 10px;
+}
+#LVH_yes
+{
+  border: 2px solid #454545;
+  background-color: #EAEAEA;
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 40%;
+ display: inline-block;
+ float: left;
+ margin-left: 6%;
+ margin-right: 1%;
+}
+#LVH_no
+{
+  border: 2px solid #454545;
+  background-color: #EAEAEA;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 40%;
+  display: inline-block;
+  float: left;
+  margin-right: 6%;
+  margin-left: 1%;
+}
+
+#notrecommend {
+  display:block;
+  float:center;
+  margin: auto;
+  border: 2px solid #CE300E;
+  background-color: #F1AEA0;
+  padding: 0 10px 10px 10px;
+  width: 75%;
+}
+.foot{
+  font-size: 13px;
+  display:inline-block;
+  clear: both;
+}
+
+footer {
+  display:block;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #347;
+  color: white;
+  border: 2px solid #a3a3c2;
+  font-size: 13px;
+  padding: 0 10px;
+  clear: both;
+}
