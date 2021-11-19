@@ -15,11 +15,10 @@
 <div class="topbar">
   <a href="index.html">Pedi CardioRef</a>
   </div>
-
-<p class="guideline">Sports Participation Recommendations (Circulation 2015)</p>
+<p class="guideline"><a href="https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000000236">Reference: ACC/AHA Sports Participation Recommendations (Circulation 2015)</a></p>
 
 <section style="margin:10px">
-  <p></p>
+  <p class="topspace"></p>
 
 <label><b>By the ACC/AHA 2015 guidelines, should my patient with</label>
 <select name="disease" id="dz" class="demoInputBox" onChange="getState();">
@@ -38,7 +37,7 @@
 <option value="_Yoga">Yoga, Bowling, or Golf</option>
 <option value="_Cricket">Cricket, Curling, or Riflery</option>
   </select>?</b>
-
+<br><br>
 <section id="question">
 Should my patient with <b>Hypertrophic Cardiomyopathy</b> participate in <b>Soccer</b>?
 </section>
@@ -49,27 +48,34 @@ Should my patient with <b>Hypertrophic Cardiomyopathy</b> participate in <b>Socc
   <ul>
   <li>Symptoms</li>
   <li>Clinical manifestations (LVH on echo or MRI)</li>
+  <li>Family history of HCM-related sudden death</li>
   </ul>
 </section>
 
 <p></p>
 <section id="answer">
-<section id="LVH_yes">
+<section id="half_left">
 <p class="sectiontitle">With LV Hypertrophy</p>
-<p>"Athletes with a probable or unequivocal clinical expression and diagnosis of HCM (ie, with the disease phenotype of LV hypertrophy) should not participate in most competitive sports, with the exception of those of low intensity (class IA sports) (see “Classification of Sport”[22]). This recommendation is independent of age, sex, magnitude of LV hypertrophy, particular sarcomere mutation, presence or absence of LV outflow obstruction (at rest or with physiological exercise), absence of prior cardiac symptoms, presence or absence of late gadolinium enhancement (fibrosis) on CMR, and whether major interventions such as surgical myectomy or alcohol ablation have been performed previously (Class III; Level of Evidence C)."
+<p>"Athletes with a probable or unequivocal clinical expression and diagnosis of HCM (ie, with the disease phenotype of <u>LV hypertrophy</u>) should <em><u>not</u></em> participate in most competitive sports, with the exception of those of low intensity (class IA sports)"
+</p><p>"This recommendation is independent of age, sex, magnitude of LV hypertrophy, particular sarcomere mutation, presence or absence of LV outflow obstruction (at rest or with physiological exercise), absence of prior cardiac symptoms, presence or absence of late gadolinium enhancement (fibrosis) on CMR, and whether major interventions such as surgical myectomy or alcohol ablation have been performed previously (Class III; Level of Evidence C)."
+<div class="verdict_no">Soccer = Inadvisable</div>
 </p>
-<p>Class IA sports: Bowling, Cricket, Curling, Golf, Riflery, Yoga
-</p>
+<hr>
+<div class="verdict_ok"><b>Class IA sports: </b>Bowling, Cricket, Curling, Golf, Riflery, Yoga = <b>Acceptable</b></div>
+<br>
 </section>
 
-<section id="LVH_no">
+<section id="half_right">
 <p class="sectiontitle">Without LV Hypertrophy</p>
 <p>
-"Participation in competitive athletics for asymptomatic, genotype-positive HCM patients without evidence of LV hypertrophy by 2-dimensional echocardiography and CMR is reasonable, particularly in the absence of a family history of HCM-related sudden death (Class IIa; Level of Evidence C)."
+"Participation in competitive athletics for <u>asymptomatic</u>, genotype-positive HCM patients
+<u>without evidence of LV hypertrophy</u> by 2-dimensional echocardiography and CMR is <em>reasonable</em>,
+particularly in the <u>absence of a family history of HCM-related sudden death</u> (Class IIa; Level of Evidence C)."
 </p>
+<div class="verdict_maybe">Soccer = Maybe (see conditions above)</div><br>
 </section>
 </section>
-
+<hr style="width:50%"><br>
 <section id="notrecommend">
   <p class="sectiontitle_notrec">Not Recommended</p>
   <p>The following are NOT recommended:</p>
@@ -81,15 +87,16 @@ Should my patient with <b>Hypertrophic Cardiomyopathy</b> participate in <b>Socc
 </section>
 
 <p class="foot">
-  Reference: <a href="https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000000236"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities.
+  <b>Reference:</b> <a href="https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000000236"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities.
     A Scientific Statement From the AHA and ACC.</i></a> <i>Circulation 2015</i>
-  <br>Disclaimer: This website does not constitute medical advice nor does it replace clinical judgement. Please consult a physician to discuss any patient-specific matters.
+  <br><br><b>Disclaimer:</b> This website is derived from published guidelines, but does not constitute medical advice nor does it replace clinical judgement. Only the text in quotation marks are direct quotations from the original guidelines. Text not in quotations as well as the method of information display are all that of the website creator and are not part of the original published guidelines. Please consult a physician to discuss any patient-specific matters.
 </p>
 
 <footer>
-<p><b>Key:</b> LV = left ventricle, LVH = left ventricular hypertrophy, HCM = hypertrophic cardiomyopathy,
+<p><b>Key:</b> LV = left ventricle, LVH = left ventricular hypertrophy,
+  HCM = hypertrophic cardiomyopathy,
 ICD = implantable cardio defibrilator,
-echo = echocardiogram
+echo = echocardiogram, CMR = cardiac MRI
 </p>
 </footer>
 
