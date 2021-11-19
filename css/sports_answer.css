@@ -2,6 +2,10 @@
 
 body {margin:0; font-family: sans-serif; }
 
+p.topspace{
+  margin-top: 90px;
+}
+
 p.selections{
  padding-left:10px;
  font-size:16px;
@@ -10,20 +14,33 @@ p.selections{
  background-color: #FFF004;
  }
 
- p.tall-line-height{
- line-height:7px;
- }
-
  .guideline {
   display: block;
-  font-size: 16px;
+  background-color: #004b62;
+  width:100%;
+  text-align: left;
+  position: fixed;
+  top:24px;
+}
+.guideline a{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: left;
+  padding: 9px;
+  text-decoration: none;
+  font-size: 12px;
   font-weight: bold;
-  border: 2px solid #737373;
- background-color: #004b62;
- color: white;
- padding: 14px;
- width: 100%;
- text-align: left;
+  border: 3px solid #a3a3a3;
+  width: 100%;
+}
+.guideline a:hover {
+ background: #bbb;
+ color: black;
+}
+.guideline a:focus {
+ background: #bbb;
+ color: black;
 }
 
 select {
@@ -34,8 +51,9 @@ select {
 
 /* Floating Header */
 .topbar {
+overflow:hidden;
  background-color: #347;
- position: left;
+ position: fixed;
  top: 0;
  width:100%;
 }
@@ -45,7 +63,7 @@ select {
  display: block;
  color: #f2f2f2;
  text-align: center;
- padding: 10px;
+ padding: 9px;
  text-decoration: none;
  font-size: 16px;
  font-family: Arial;
@@ -55,6 +73,10 @@ select {
 }
 
 .topbar a:hover {
+ background: #ddd;
+ color: black;
+}
+.topbar a:focus {
  background: #ddd;
  color: black;
 }
@@ -123,7 +145,37 @@ background-color: #CCD4EA;
   width:100%;
   padding: 10px;
 }
-#LVH_yes
+
+.verdict_ok {
+ background: #9fdb61 20px 50%;
+ border: 2px solid #467813;
+ border-radius: 5px;
+ color: #000000;
+ padding: 5px 10px;
+ clear:both;
+}
+
+.verdict_maybe{
+  background: #ffd966;
+  border: 2px solid #e5c35b;
+  border-radius: 5px;
+  color: #000000;
+  padding: 5px 10px;
+  clear:both;
+  font-weight: bold;
+}
+
+.verdict_no {
+  background: #f5a3b7;
+  border: 2px solid #aa6274;
+  border-radius: 5px;
+  color: #000000;
+  padding: 5px 10px;
+  clear:both;
+  font-weight: bold;
+}
+
+#half_left
 {
   border: 2px solid #454545;
   background-color: #EAEAEA;
@@ -135,7 +187,7 @@ background-color: #CCD4EA;
  margin-left: 6%;
  margin-right: 1%;
 }
-#LVH_no
+#half_right
 {
   border: 2px solid #454545;
   background-color: #EAEAEA;
@@ -152,15 +204,17 @@ background-color: #CCD4EA;
   display:block;
   float:center;
   margin: auto;
-  border: 2px solid #CE300E;
-  background-color: #F1AEA0;
+  border: 2px solid #aa6274;
+  background-color: #f5a3b7;
   padding: 0 10px 10px 10px;
   width: 75%;
+  clear: both;
 }
 .foot{
   font-size: 13px;
   display:inline-block;
   clear: both;
+  margin-bottom: 80px;
 }
 
 footer {
