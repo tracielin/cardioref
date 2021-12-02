@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- defines the default zoom for mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8">
+ <title>AHA/ACC 2015 Sports Participation Selector Guide: Myocarditis</title>
+
+ <link rel="stylesheet" href="css/sports_answer.css">
+
+<style>
+div{
+    -webkit-margin-before:0;
+    -webkit-margin-after:0;
+    -webkit-margin-start:0;
+    -webkit-margin-end:0;
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="topbar">
+  <a href="index.html">Pedi CardioRef</a>
+  </div>
+<p class="guideline"><a href="https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000000239">Reference: ACC/AHA Sports Participation Recommendations (Circulation 2015)</a></p>
+
+<section style="margin:10px">
+  <p class="topspace"></p>
+
+<label><b>By the ACC/AHA 2015 guidelines, should my patient with</label>
+  <select name="disease" id="dz" class="InputBox" onChange="getState();">
+  <option value="">*Select Disease*</option>
+  <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
+  <option value="HCM">Hypertrophic Cardiomyopathy </option>
+  <option value="LVNC">Left Ventricular Non-Compaction </option>
+  <option value="DilRestr">Dilated or Restrictive Cardiomyopathy </option>
+  <option value="ARVC">Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC) </option>
+  <option value="Myo">Myocarditis </option>
+  <option value="Peri">Pericarditis </option>
+  <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
+  <option value="ASDVSDPDA">ASD, VSD, or PDA </option>
+  <option value="PS">Pulmonic Stenosis </option>
+  <option value="AS">Aortic Stenosis </option>
+  <option value="Coarct">Coarctation </option>
+  <option value="Cyan">Cyanotic Heart Disease, unrepaired or with palliative shunt </option>
+  <option value="TOF">Tetralogy of Fallot, s/p repair </option>
+  <option value="TGA_Must">d-TGA, s/p atrial switch (Mustard/Senning)</option>
+  <option value="TGA_Art">d-TGA, s/p arterial switch </option>
+  <option value="CCTGA">Congenitally-corrected TGA </option>
+  <option value="Fontan">Fontan </option>
+  <option value="Ebstein">Ebstein Anomaly </option>
+  <option value="AnomCoronary">Anomalous Coronary Artery Origin</option>
+  <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
+  <option value="PVR">Elevated PVR in CHD </option>
+  <option value="VentricularDysfxn">Ventricular Dysfunction s/p CHD Surgery</option>
+  <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
+  <option value="Valve_AS">Aortic Stenosis</option>
+  <option value="Valve_AR">Aortic Regurgitation </option>
+  <option value="Valve_MS">Mitral Stenosis</option>
+  <option value="Valve_MR">Mitral Regurgitation </option>
+  <option value="Valve_Hx">History of Cardiac Valve Surgery</option>
+  <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
+  <option value="HTN">Hypertension </option>
+  <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
+  <option value="Marfan">Aortic Diseases and Marfan Syndrome</option>
+  <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
+  <option value="CoronaryOverview">Coronary Artery Disease </option>
+  <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
+  <option value="Syncope">Syncope </option>
+  <option value="Arrhythmia">Arrhythmias (SVT, PVC, Vtach, etc.) </option>
+  <option value="ConductionDefect">Conduction Defects (AV block, brady, pacemaker, RBBB/LBBB)</option>
+  <option value="Channelopathies">Channelopathies (LQTS, CPVT, Brugada, etc.) </option>
+  <option value="ICD">Implantable Cardioverter-Defibrillator (ICD) </option>
+  </select>
+
+<label for="spt">participate in</label>
+<select name="sport" id="spt" class="demoInputBox"  onChange="getState();">
+<option value="">*Select Sport*</option>
+<option value="_Overview">*Overview*</option>
+  </select>?</b>
+<br><br>
+<section id="question">
+Should my patient with <b>myocarditis</b> participate in organized sports?
+</section>
+  </section>
+<br>
+<section id="needtoknow">
+  <p class="sectiontitle">Need to know:</p>
+  <ul>
+  <li>Serum markers of myocardial injury, inflammation, and heart failure</li>
+  <li>Presence of arrhythmias</li>
+  <li>Ventricular systolic function</li>
+ </ul>
+  <p class="sectiontitle">Need to do the following no less than 3-6 months after initial illness:</p>
+  <ul>
+  <li>Echocardiogram</li>
+  <li>24-hour Holter</li>
+  <li>Exercise ECG</li>
+  </ul>
+  <p>"Before returning to competitive sports, athletes who initially present with an acute clinical syndrome consistent with myocarditis
+    should undergo a resting echocardiogram, 24-hour Holter monitoring,
+    and an exercise ECG no less than 3 to 6 months after the initial illness (Class I; Level of Evidence C)"</p>
+</section>
+
+<p class="arrows">&#11019 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#11018;</p>
+
+<section id="answer">
+<section id="half_left">
+<p class="sectiontitle">Active inflammation present</p>
+<p>"Athletes with probable or definite myocarditis should not participate in competitive sports while active
+  inflammation is present. This recommendation is independent of age, gender, and LV function (Class III; Level of Evidence C)."
+</p>
+<div class="verdict_no">Competitive sports inadvisable (see conditions above)</div>
+<br>
+</section>
+
+<section id="half_right">
+<p class="sectiontitle">All tests/labs reassuring</p>
+<p>
+"It is reasonable that athletes resume training and competition if all of the following criteria are met (Class IIa; Level of Evidence C):
+<ul>
+    <li>Ventricular systolic function has returned to the normal range.</li>
+
+    <li>Serum markers of myocardial injury, inflammation, and heart failure have normalized.</li>
+
+    <li>Clinically relevant arrhythmias such as frequent or complex repetitive forms of ventricular or supraventricular
+      ectopic activity are absent on Holter monitor and graded exercise ECGs.</li>
+</ul>
+At present, it is unresolved whether resolution of myocarditis-related LGE should be required to permit return to competitive sports."
+</p>
+<div class="verdict_ok"><b>Competitive sports are reasonable if all the above criteria are met.</b></div><br>
+</section>
+</section>
+<hr style="width:50%"><br>
+
+<p class="foot">
+  <b>Reference:</b> <a href="https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000000236"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities.
+    A Scientific Statement From the AHA and ACC.</i></a> <i>Circulation 2015</i>
+  <br><br><b>Disclaimer:</b> This website is derived from published guidelines, but does not constitute medical advice nor does it replace clinical judgement. Only the text in quotation marks are direct quotations from the original guidelines. Text not in quotations as well as the method of information display are all that of the website creator and are not part of the original published guidelines. Please consult a physician to discuss any patient-specific matters.
+</p>
+
+<footer>
+<p><b>Key:</b> LGE = late gadolinium enhancement (on MRI), ECG = electrocardiogram, LV = left ventricle,
+echo = echocardiogram, CMR = cardiac MRI
+</p>
+</footer>
+
+<script>
+
+function getState() {
+    var disease = document.getElementById("dz").value;
+    var sport = document.getElementById("spt").value;
+    if(disease && sport) {
+      console.log(disease);
+      console.log(sport);
+      console.log(disease+sport);
+      combo=disease+sport;
+location.href = combo+'.html';
+
+    }
+}
+
+  </script>
+
+</html>
