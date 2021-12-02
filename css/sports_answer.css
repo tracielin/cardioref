@@ -179,6 +179,15 @@ background-color: #CCD4EA;
   clear:both;
   font-weight: bold;
 }
+.verdict_no2 {
+  background: #a11236;
+  border: 2px solid #aa6274;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  clear:both;
+  font-weight: bold;
+}
 
 #half_left
 {
