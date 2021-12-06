@@ -88,6 +88,12 @@ p.selections{
   margin: 0px;
   padding: 0px;
 }
+.arrowsdouble{
+  font-size:60px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
  .guideline {
   display: block;
   background-color: #004b62;
@@ -283,6 +289,43 @@ background-color: #CCD4EA;
   float: left;
   margin-right: 6%;
   margin-left: 1%;
+}
+
+#third_left
+{
+  border: 2px solid #454545;
+  background-color: #EAEAEA;
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 27%;
+ display: inline-block;
+ float: left;
+ margin-left: 2%;
+ margin-right: 1%;
+}
+#third_middle
+{
+  border: 2px solid #454545;
+  background-color: #EAEAEA;
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 27%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
+ margin-right: 1%;
+}
+#third_right
+{
+  border: 2px solid #454545;
+  background-color: #EAEAEA;
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 27%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
+ margin-right: 2%;
 }
 
 #notrecommend {
