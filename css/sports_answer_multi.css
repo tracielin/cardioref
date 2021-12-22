@@ -244,7 +244,6 @@ background-color: #CCD4EA;
   color: #000000;
   padding: 5px 10px;
   clear:both;
-  font-weight: bold;
 }
 
 .verdict_no {
@@ -326,6 +325,68 @@ background-color: #CCD4EA;
  float: left;
  margin-left: 1%;
  margin-right: 2%;
+}
+
+/* four options */
+
+#quarter_left
+{
+ border: 2px solid #454545;
+ background-color: #EAEAEA;
+ padding-left: 8px;
+ padding-right: 8px;
+ width: 20%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
+ margin-right: 1%;
+}
+#quarter_middleleft
+{
+  border: 2px solid #454545;
+  background-color: #EAEAEA;
+ padding-left: 8px;
+ padding-right: 8px;
+ width: 20%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
+ margin-right: 1%;
+}
+#quarter_middleright
+{
+  border: 2px solid #454545;
+  background-color: #EAEAEA;
+ padding-left: 8px;
+ padding-right: 8px;
+ width: 20%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
+ margin-right: 1%;
+}
+
+#quarter_right
+{
+  border: 2px solid #454545;
+  background-color: #EAEAEA;
+ padding-left: 8px;
+ padding-right: 8px;
+ width: 20%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
+ margin-right: 1%;
+}
+
+#middlebox
+{
+border: 2px solid #455EA4;
+background-color: #EAEAEA;
+ padding:2px 20px;
+ margin: auto;
+ width: 450px;
+ display: block;
 }
 
 #notrecommend {
