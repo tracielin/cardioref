@@ -20,6 +20,14 @@ p.selections{
   margin: 0px;
   padding: 0px;
 }
+
+.arrowsdouble{
+  font-size:60px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
  .guideline {
   display: block;
   background-color: #004b62;
