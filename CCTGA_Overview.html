@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <head>
   <meta charset="UTF-8">
- <title>AHA/ACC 2015 Sports Participation Selector Guide: __</title>
+ <title>AHA/ACC 2015 Sports Participation Selector Guide: Congenitally Corrected Transposition of the Great Arteries (CC-TGA)</title>
 
- <link rel="stylesheet" href="css/sports_answer_multi.css">
+ <link rel="stylesheet" href="css/sports_answer.css">
 
 <style>
 div{
@@ -25,7 +25,7 @@ div{
 <div class="topbar">
   <a href="index.html">Pedi CardioRef</a>
   </div>
-<p class="guideline"><a href="https://www.ahajournals.org/doi/10.1161/CIR.0000000000000240">Reference: ACC/AHA Sports Participation Recommendations (Circulation 2015) Task Force 4: Congenital Heart Disease</a></p>
+<p class="guideline"><a href="https://www.ahajournals.org/doi/10.1161/CIR.0000000000000240">Reference: ACC/AHA Sports Participation Recommendations (Circulation 2015)</a></p>
 
 <section style="margin:10px">
   <p class="topspace"></p>
@@ -47,9 +47,9 @@ div{
   <option value="Coarct">Coarctation </option>
   <option value="Cyan">Cyanotic Heart Disease, unrepaired or with palliative shunt </option>
   <option value="TOF">Tetralogy of Fallot, s/p repair </option>
-  <option value="TGA_Must">d-transposition (d-TGA), s/p atrial switch (Mustard/Senning)</option>
-  <option value="TGA_Art">d-transposition (d-TGA), s/p arterial switch </option>
-  <option value="CCTGA">Congenitally-corrected TGA (CC-TGA, L-TGA)</option>
+  <option value="TGA_Must">d-TGA, s/p atrial switch (Mustard/Senning)</option>
+  <option value="TGA_Art">d-TGA, s/p arterial switch </option>
+  <option value="CCTGA">Congenitally-corrected TGA </option>
   <option value="Fontan">Fontan </option>
   <option value="Ebstein">Ebstein Anomaly </option>
   <option value="AnomCoronary">Anomalous Coronary Artery Origin</option>
@@ -78,109 +78,83 @@ div{
 
 <label for="spt">participate in</label>
 <select name="sport" id="spt" class="demoInputBox"  onChange="getState();">
-<option value="">*Select Sport*</option>
+<!-- <option value="">*Select Sport*</option> -->
 <option value="_Overview">*Overview*</option>
   </select>?</b>
 <br><br>
 <section id="question">
-Should my patient with <b>__</b> participate in organized sports?
+Should my patient with <b>Congenitally-corrected transposition of the great arteries (CC-TGA, L-TGA)</b> participate in organized sports?
 </section>
   </section>
 <br>
 <section id="needtoknow">
-  <p class="sectiontitle">Need to know:</p>
+  <p class="sectiontitle">Need to perform:</p>
   <ul>
-  <li>stuff</li>
-  <li>stuff</li>
+  <li>Clinical assessment</li>
+  <li>ECG</li>
+  <li>Imaging of ventricular function</li>
+  <li>Exercise testing</li>
   </ul>
+  <p>"It is recommended that before participation in competitive sports, all CCTGA athletes
+    should undergo evaluation that includes clinical assessment,
+    ECG, imaging assessment of ventricular function, and exercise testing (Class I; Level of Evidence B)."</p>
 </section>
 
-<div class="multi">
-<ul class="tabs">
+<p class="arrows">&#11019 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#11019 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#11018; &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#11018;</p>
 
-  <li class="tab">
-      <input type="radio" name="tabs" checked="checked" id="tab1" />
-      <label for="tab1">First tab</label>
-      <div id="tab-content1" class="content">
-        <h1>Header of first tab</h1>
-        <hr>
-        <section id="needtoknow">
-          <p class="sectiontitle">Need to know:</p>
-          <ul>
-          <li>Pulmonary hypertension?</li>
-          <br>
-          </ul>
-        </section>
+<section id="answer">
+<section id="quarter_left">
+<p class="sectiontitle">Asymptomatic, no abnormalities on evaluation</p>
+<p>"Asymptomatic athletes with CCTGA and without abnormalities on clinical evaluation may be considered for
+  participation in moderate- to high-intensity competitive sports (classes II and IIIB or IIIC) (Class IIb; Level of Evidence C)."
+</p>
+<div class="verdict_ok"><b>May consider II, IIIB, IIIC sports.</b></div>
+<br>
+</section>
 
-        <p class="arrows">&#11019 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#11018;</p>
+<section id="quarter_middleleft">
+<p class="sectiontitle">Without arrhythmias, ventricular dysfunction, exercise intolerance, or exercise-induced ischemia</p>
+<p>
+"Athletes with CCTGA and without clinically significant arrhythmias, ventricular dysfunction,
+exercise intolerance, or exercise-induced ischemia may be considered for participation in
+low- and moderate-intensity competitive sports (class IA and IB) (Class IIb; Level of Evidence C)."
+</p>
+<div class="verdict_maybe">May consider Class IA and IB sports.</div><br>
+</section>
 
-        <section id="answer">
-        <section id="half_left">
-        <p class="sectiontitle">Section 1</p>
-        <p>""
-        </p>
-        <div class="verdict_ok"><b>stuff</b></div>
-        <br>
-        </section>
+<section id="quarter_middleright">
+<p class="sectiontitle">Arrhythmias, severe ventricular dysfunction</p>
+<p>
+"Participation in competitive sports in those CCTGA athletes with a history of clinically significant arrhythmias
+or severe ventricular dysfunction may be
+considered on an individual basis based on clinical stability (Class IIb; Level of Evidence C)."
+</p>
+<div class="verdict_maybe">Consider on an individual basis</div><br>
+</section>
 
-        <section id="half_right">
-        <p class="sectiontitle">Section 2</p>
-        <p>
-        ""
-        </p>
-        <div class="verdict_maybe">May consider </div><br>
-        </section>
-        </section>
-      </div>
-  </li>
+<section id="quarter_right">
+<p class="sectiontitle">Severe systemic RV dysfunction, severe RVOTO, recurrent arrhythmias</p>
+<p>
+"Athletes with severe clinical systemic RV dysfunction, severe RV outflow tract obstruction,
+or recurrent or uncontrolled atrial or ventricular arrhythmias should be restricted from all competitive sports,
+with the possible exception of low-intensity (class IA) sports (Class III; Level of Evidence C)."
+</p>
+<div class="verdict_no">No sports, with the possible exception of Class IA sports.</div><br>
+</section>
 
-  <li class="tab">
-    <input type="radio" name="tabs" id="tab2" />
-    <label for="tab2">Tab 2</label>
-    <div id="tab-content2" class="content">
-        <h1>header for tab 2</h1>
-        <hr>
-        <section id="needtoknow">
-          <p class="sectiontitle">Need to know:</p>
-          <ul>
-          <li>stuff</li>
-          </ul>
-          <br>
-        </section>
+</section>
 
-        <p class="arrows">&#11019 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#11018;</p>
 
-        <section id="answer">
-        <section id="half_left">
-        <p class="sectiontitle">Tab2 section 1</p>
-        <p>""
-        </p>
-        <div class="verdict_ok"><b>stuf</b></div>
-        <br>
-        </section>
-
-        <section id="half_right">
-        <p class="sectiontitle">Tab 2 section 2</p>
-        <p>
-        ""
-        </p>
-        <div class="verdict_maybe">stuff</div><br>
-        </section>
-        </section>
-     </div>
-  </li>
-</ul>
-</div>
 
 <p class="foot">
-  <b>Reference:</b> <a href="https://www.ahajournals.org/doi/10.1161/CIR.0000000000000240"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities: Task Force 4: Congenital Heart Disease.
+  <b>Reference:</b> <a href="https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000000236"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities.
     A Scientific Statement From the AHA and ACC.</i></a> <i>Circulation 2015</i>
   <br><br><b>Disclaimer:</b> This website is derived from published guidelines, but does not constitute medical advice nor does it replace clinical judgement. Only the text in quotation marks are direct quotations from the original guidelines. Text not in quotations as well as the method of information display are all that of the website creator and are not part of the original published guidelines. Please consult a physician to discuss any patient-specific matters.
 </p>
 
-
 <footer>
-<p><b>Key:</b> ASD = atrial septal defect, VSD = ventricular septal defect, PDA = patent ductus arteriosus
+<p><b>Key:</b> ECG = electrocardiogram, LV = left ventricle, RV = right ventricle,
+echo = echocardiogram
 </p>
 </footer>
 
