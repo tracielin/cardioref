@@ -265,6 +265,17 @@ background-color: #CCD4EA;
   font-weight: bold;
 }
 
+#single_center
+{
+  border: 2px solid #454545;
+  background-color: #EAEAEA;
+ padding: 2px 20px;
+ width: 40%;
+ display: block;
+ margin: auto;
+ clear: both;
+}
+
 #half_left
 {
   border: 2px solid #454545;
