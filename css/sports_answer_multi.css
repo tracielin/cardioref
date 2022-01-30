@@ -22,6 +22,7 @@ body {margin:0; font-family: sans-serif; }
     float: left;
     display: block;
 margin-bottom: 800px;
+
 }
 
 .tabs .tab>input[type="radio"] {
@@ -39,6 +40,7 @@ margin-bottom: 800px;
     position: relative;
     color: #FFF;
     background: green;
+    border: #000 1px solid;
 }
 
 .tabs .content {
