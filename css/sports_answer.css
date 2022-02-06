@@ -2,6 +2,31 @@
 
 body {margin:0; font-family: sans-serif; }
 
+.hidden{
+       display:none;
+    }
+
+#showtable{
+ font-size:16px;
+ font-weight: bold;
+ background: #CCD4EA;
+ border: 2px solid #455EA4;
+ border-radius: 10px;
+ padding: 5px;
+ width: 100%;
+}
+
+#elaboration {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+ background: #DDE0FB;
+margin-top: -2px;
+  border-radius: 10px;
+  border: 2px solid #455EA4;
+}
+
+
 p.topspace{
   margin-top: 90px;
 }

@@ -2,6 +2,10 @@
 
 body {margin:0; font-family: sans-serif; }
 
+.hidden{
+       display:none;
+    }
+
 /* Tabs  */
 
  .multi { /*didn't work to block reference to bottom */
