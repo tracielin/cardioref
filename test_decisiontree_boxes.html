@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- defines the default zoom for mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8">
+ <title>TEST OF DECISION TREE FOR MOBILE DEVICE</title>
+
+ <link rel="stylesheet" href="_____.css">
+
+<style>
+div{
+    -webkit-margin-before:0;
+    -webkit-margin-after:0;
+    -webkit-margin-start:0;
+    -webkit-margin-end:0;
+}
+
+body {
+  font-family: arial;
+}
+.hide {
+  display: none;
+}
+.header {
+  font-weight: bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <p class='header'>Select a category</p>
+  <input type="radio" name="tab" value="none" onclick="showBAV();" />
+    Bicuspid aortic valve
+<br><br><input type="radio" name="tab" value="none" onclick="showMarfan();" />
+    Marfan syndrome
+<br><br><input type="radio" name="tab" value="none" onclick="showTAA();" />
+    Unexplained TAA, familial TAA syndrome,
+    or known mutation leading to familial TAA syndrome
+    (ACTA2, MYH11, FBN1, TGFBR1, TGFBR2, MLCK, SMAD3, TGFB2, and others)
+<br><br><input type="radio" name="tab" value="none" onclick="showLoeys();" />
+    Loeys-Dietz syndrome or vascular Ehlers-Danlos syndrome
+<br><br><input type="radio" name="tab" value="none" onclick="showAbnl();" />
+    Aortic dimensions above the normal range (z scores >2, or aortic root diameters measuring >40mm in tall men or >36mm in tall women) & no features of Marfan syndrome, Loeys-Dietz, or familial TAA syndrome
+
+<!-- BAV -->
+
+  <div id="BAV" class="hide">
+    <hr><p class='header'>Bicuspid aortic valve</p>
+    <input type="radio" name="tab" value="none" onclick="showBAV_1();" />
+    Bicuspid aortic valve WITHOUT aortic root or ascending aorta dilation
+  <br><br><input type="radio" name="tab" value="none" onclick="showBAV_2();" />
+    Bicuspid aortic valve WITH aortic dimensions above normal
+  </div>
+
+
+      <div id="BAV_1" class="hide">
+      <hr><p class='header'>Bicuspid aortic valve WITHOUT aortic dilation</p>
+      <p>"Athletes with BAV can participate in all competitive athletics if the aortic root and ascending aorta are not dilated (ie, z score < 2, or < 2
+        standard deviations from the mean, or < 40 mm in adults). The function of the BAV (whether stenotic or regurgitant) is also important in determining participation recommendations (see Task Force 5 on valvular heart disease) (Class I; Level of Evidence C)."</p>
+      </div>
+
+      <div id="BAV_2" class="hide">
+      <hr><p>This is div 1_2</p>
+      Echo q12mo
+      <p>More radio buttons here for severity</p>
+        </div>
+
+<!-- Marfan -->
+
+  <div id="Marfan" class="hide">
+    <hr><p>"Athletes with Marfan syndrome should undergo echocardiographic (and in some instances MRA or CT) measurement
+      of the aortic root dimension every 6 to 12 months, depending on aortic size (Class I; Level of Evidence C)."</p>
+  </div>
+
+<!-- TAA -->
+
+  <div id="TAA" class="hide">
+    <hr><p class='header'>Unexplained TAA, familial TAA syndrome,
+    or known mutation leading to familial TAA syndrome
+    (ACTA2, MYH11, FBN1, TGFBR1, TGFBR2, MLCK, SMAD3, TGFB2, and others)</p>
+    <p>TAA stuff here</p>
+  </div>
+
+<!-- Loeys -->
+
+  <div id="Loeys" class="hide">
+    <hr><p class='header'>Loeys-Dietz syndrome or vascular Ehlers-Danlos syndrome</p>
+    <p>Div 3 stuff here</p>
+  </div>
+
+<!-- Abnl -->
+
+  <div id="Abnl" class="hide">
+    <hr><p class='header'>Aortic dimensions above the normal range (non-Marfan, non-familial TAA, non-Loeys-Dietz)</p>
+    <p>stuff here</p>
+  </div>
+
+</body>
+
+<!-- Categories are: BAV, Marfan, TAA, Loeys, Abnl -->
+
+<script type="text/javascript">
+function showBAV(){
+  document.getElementById('BAV').style.display ='block';
+  document.getElementById('BAV_1').style.display ='none';
+  document.getElementById('BAV_2').style.display = 'none';
+  document.getElementById('Marfan').style.display = 'none';
+  document.getElementById('TAA').style.display ='none';
+  document.getElementById('Loeys').style.display ='none';
+  document.getElementById('Abnl').style.display ='none';
+}
+function showMarfan(){
+  document.getElementById('BAV').style.display ='none';
+  document.getElementById('BAV_1').style.display ='none';
+  document.getElementById('BAV_2').style.display = 'none';
+  document.getElementById('Marfan').style.display ='block';
+  document.getElementById('TAA').style.display ='none';
+  document.getElementById('Loeys').style.display ='none';
+  document.getElementById('Abnl').style.display ='none';
+}
+
+function showTAA(){
+  document.getElementById('BAV').style.display ='none';
+  document.getElementById('BAV_1').style.display ='none';
+  document.getElementById('BAV_2').style.display = 'none';
+  document.getElementById('Marfan').style.display ='none';
+  document.getElementById('TAA').style.display ='block';
+  document.getElementById('Loeys').style.display ='none';
+  document.getElementById('Abnl').style.display ='none';
+}
+
+function showLoeys(){
+  document.getElementById('BAV').style.display ='none';
+  document.getElementById('BAV_1').style.display ='none';
+  document.getElementById('BAV_2').style.display = 'none';
+  document.getElementById('Marfan').style.display ='none';
+  document.getElementById('TAA').style.display ='none';
+  document.getElementById('Loeys').style.display ='block';
+  document.getElementById('Abnl').style.display ='none';
+}
+
+function showAbnl(){
+  document.getElementById('BAV').style.display ='none';
+  document.getElementById('BAV_1').style.display ='none';
+  document.getElementById('BAV_2').style.display = 'none';
+  document.getElementById('Marfan').style.display ='none';
+  document.getElementById('TAA').style.display ='none';
+  document.getElementById('Loeys').style.display ='none';
+  document.getElementById('Abnl').style.display ='block';
+
+}
+
+/* Subcategories here */
+
+function showBAV_1(){
+  document.getElementById('BAV').style.display ='block';
+  document.getElementById('BAV_1').style.display ='block';
+  document.getElementById('BAV_2').style.display = 'none';
+  document.getElementById('Marfan').style.display ='none';
+  document.getElementById('TAA').style.display ='none';
+  document.getElementById('Loeys').style.display ='none';
+  document.getElementById('Abnl').style.display ='none';
+}
+
+function showBAV_2(){
+  document.getElementById('BAV').style.display ='block';
+  document.getElementById('BAV_1').style.display ='none';
+  document.getElementById('BAV_2').style.display = 'block';
+  document.getElementById('Marfan').style.display ='none';
+  document.getElementById('TAA').style.display ='none';
+  document.getElementById('Loeys').style.display ='none';
+  document.getElementById('Abnl').style.display ='none';
+}
+
+/* Below is the "master" list of all divs, for copy-pasting then customizing what is displayed */
+
+
+function showTEMPLATE(){
+  document.getElementById('BAV').style.display ='none';
+  document.getElementById('BAV_1').style.display ='none';
+  document.getElementById('BAV_2').style.display = 'none';
+  document.getElementById('Marfan').style.display ='none';
+  document.getElementById('TAA').style.display ='none';
+  document.getElementById('Loeys').style.display ='none';
+  document.getElementById('Abnl').style.display ='none';
+}
+
+</script>
+
+</html>
