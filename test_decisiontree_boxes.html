@@ -39,6 +39,18 @@ body {
   padding: 5px;
 }
 
+label {
+  position:relative;
+  padding-left:2.5ch;
+  display: block;
+  margin-bottom: 20px;
+}
+
+label > [type="radio"] {
+  position: absolute;
+  left: 0;
+}
+
 </style>
 
 </head>
@@ -46,31 +58,45 @@ body {
 <body>
 
   <p class='header'>Select a category</p>
+<label>
   <input type="radio" name="tab" value="none" onclick="showBAV();" />
     <b>Bicuspid aortic valve</b>
-<br><br><input type="radio" name="tab" value="none" onclick="showMarfan();" />
+</label>
+<label><input type="radio" name="tab" value="none" onclick="showMarfan();" />
     <b>Marfan syndrome</b>
-<br><br><input type="radio" name="tab" value="none" onclick="showTAA();" />
+</label>
+<label>
+   <input type="radio" name="tab" value="none" onclick="showTAA();" />
     <b>Unexplained TAA, familial TAA syndrome,
     or known mutation</b> leading to familial TAA syndrome
     (ACTA2, MYH11, FBN1, TGFBR1, TGFBR2, MLCK, SMAD3, TGFB2, and others)
-<br><br><input type="radio" name="tab" value="none" onclick="showLoeys();" />
+</label>
+<label>
+<input type="radio" name="tab" value="none" onclick="showLoeys();" />
     <b>Loeys-Dietz syndrome</b> or <b>vascular Ehlers-Danlos syndrome</b>
-<br><br><input type="radio" name="tab" value="none" onclick="showAbnl();" />
-    <b>Aortic dimensions above the normal range</b> (z scores >2, or aortic root diameters measuring >40mm in tall men or >36mm in tall women) & no features of Marfan syndrome, Loeys-Dietz, or familial TAA syndrome
-<br><br><input type="radio" name="tab" value="none" onclick="showSurg();" />
+</label>
+<label><input type="radio" name="tab" value="none" onclick="showAbnl();" />
+    <b>Aortic dimensions above the normal range*
+    & no features of Marfan syndrome, Loeys-Dietz, or familial TAA syndrome</b>
+    (*z scores >2, or aortic root diameters measuring >40mm in tall men or >36mm in tall women)
+</label>
+<label>
+  <input type="radio" name="tab" value="none" onclick="showSurg();" />
         <b>S/p surgical correction and no residual aortic enlargement/dissection</b>
-<br><br><input type="radio" name="tab" value="none" onclick="showDissect();" />
+</label>
+<label>
+  <input type="radio" name="tab" value="none" onclick="showDissect();" />
         <b>Chronic aortic dissection or vessel aneurysm/dissection</b>
-<hr>
+</label>
+<hr><hr>
 <!-- BAV -->
 
   <div id="BAV" class="hide divAnswer">
     <p class='header'>Bicuspid aortic valve</p>
-    <input type="radio" name="tab" value="none" onclick="showBAV_1();" />
-    Bicuspid aortic valve WITHOUT aortic root or ascending aorta dilation
-  <br><br><input type="radio" name="tab" value="none" onclick="showBAV_2();" />
-    Bicuspid aortic valve WITH aortic dimensions above normal
+    <label><input type="radio" name="tab" value="none" onclick="showBAV_1();" />
+    Bicuspid aortic valve WITHOUT aortic root or ascending aorta dilation </label>
+<label><input type="radio" name="tab" value="none" onclick="showBAV_2();" />
+    Bicuspid aortic valve WITH aortic dimensions above normal</label>
   </div>
 
 
@@ -88,15 +114,15 @@ body {
 
 <!-- Marfan -->
 
-  <div id="Marfan" class="hide">
-    <hr><p>"Athletes with Marfan syndrome should undergo echocardiographic (and in some instances MRA or CT) measurement
+  <div id="Marfan" class="hide divAnswer">
+    <p>"Athletes with Marfan syndrome should undergo echocardiographic (and in some instances MRA or CT) measurement
       of the aortic root dimension every 6 to 12 months, depending on aortic size (Class I; Level of Evidence C)."</p>
   </div>
 
 <!-- TAA -->
 
-  <div id="TAA" class="hide">
-    <hr><p class='header'>Unexplained TAA, familial TAA syndrome,
+  <div id="TAA" class="hide divAnswer">
+    <p class='header'>Unexplained TAA, familial TAA syndrome,
     or known mutation leading to familial TAA syndrome
     (ACTA2, MYH11, FBN1, TGFBR1, TGFBR2, MLCK, SMAD3, TGFB2, and others)</p>
     <p>TAA stuff here</p>
@@ -104,30 +130,30 @@ body {
 
 <!-- Loeys -->
 
-  <div id="Loeys" class="hide">
-    <hr><p class='header'>Loeys-Dietz syndrome or vascular Ehlers-Danlos syndrome</p>
+  <div id="Loeys" class="hide divAnswer">
+    <p class='header'>Loeys-Dietz syndrome or vascular Ehlers-Danlos syndrome</p>
     <p>Loeys stuff here</p>
   </div>
 
 <!-- Abnl -->
 
-  <div id="Abnl" class="hide">
-    <hr><p class='header'>Aortic dimensions above the normal range (non-Marfan, non-familial TAA, non-Loeys-Dietz)</p>
+  <div id="Abnl" class="hide divAnswer">
+    <p class='header'>Aortic dimensions above the normal range (non-Marfan, non-familial TAA, non-Loeys-Dietz)</p>
     <p>stuff here</p>
   </div>
 
 
 <!-- Surg -->
 
-  <div id="Surg" class="hide">
-    <hr><p class='header'>s/p Surgical correction of aortic root or ascending aorta, and no residual aortic enlargement or dissection</p>
+  <div id="Surg" class="hide divAnswer">
+    <p class='header'>s/p Surgical correction of aortic root or ascending aorta, and no residual aortic enlargement or dissection</p>
     <p>stuff here</p>
   </div>
 
 <!-- Dissect -->
 
-    <div id="Dissect" class="hide">
-      <hr><p class='header'>Chronic aortic dissection or vessel aneurysm/dissection</p>
+    <div id="Dissect" class="hide divAnswer">
+      <p class='header'>Chronic aortic dissection or vessel aneurysm/dissection</p>
       <p>stuff here</p>
     </div>
 
