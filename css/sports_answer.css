@@ -304,6 +304,60 @@ background-color: #CCD4EA;
  margin-right: 2%;
 }
 
+#twothird_right
+{
+  border: 2px solid #454545;
+  background-color: #EAEAEA;
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 55%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
+ margin-right: 2%;
+}
+
+#third_left_blank
+{
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 27%;
+ display: inline-block;
+ float: left;
+ margin-left: 2%;
+ margin-right: 1%;
+}
+#third_middle_blank
+{
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 27%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
+ margin-right: 1%;
+}
+#third_right_blank
+{
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 27%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
+ margin-right: 2%;
+}
+
+#twothird_right_blank
+{
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 55%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
+ margin-right: 2%;
+}
 
 /* four options */
 
@@ -380,6 +434,17 @@ background-color: #EAEAEA;
  display: block;
 }
 
+
+#middlebox_wide
+{
+border: 2px solid #454545;
+background-color: #EAEAEA;
+ padding:2px 20px;
+ margin: auto;
+ width: 50%;
+ display: block;
+}
+
 #notrecommend {
   display:block;
   float:center;
@@ -388,6 +453,17 @@ background-color: #EAEAEA;
   background-color: #f5a3b7;
   padding: 0 10px 10px 10px;
   width: 75%;
+  clear: both;
+}
+
+#generalconsider {
+  display:block;
+  float:center;
+  margin: auto;
+  border: 2px solid #000000;
+  background-color: #EAEAEA;
+  padding: 0 10px 10px 10px;
+  width: 90%;
   clear: both;
 }
 .foot{
