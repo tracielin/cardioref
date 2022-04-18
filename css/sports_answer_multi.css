@@ -6,9 +6,48 @@ body {margin:0; font-family: sans-serif; }
        display:none;
     }
 
+/* For separate pages after navigator menu */
+
+.largeanswerbox{
+  display: block;
+  /* margin: auto; */
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px black solid;
+  position: relative;
+  padding: 10px;
+}
+
+nav a {
+  color: #ffffff;
+  background-color: #525252;
+  width: 10%;
+  display: inline-block;
+  text-decoration: none;
+  margin: 12px;
+  padding: 13px;
+  border-radius: 10px;
+  border: 2px #090909 solid;
+  text-align: center;
+  /* text-shadow:
+    -1px -1px 0 #010101,
+    1px -1px 0 #010101,
+    -1px 1px 0 #010101,
+    1px 1px 0 #010101; */
+}
+
+nav a:hover{
+  background: #f6d5e0;
+  color: #000000;
+}
+.active{
+ background: #990033;
+}
+
+
 /* Tabs  */
 
- .multi { /*didn't work to block reference to bottom */
+ .multi { /*didn't work to block reference to bottom. probably because need to pick a div size that isn't percentage */
   display: block;
   width: 100%;
   height: 100%;
@@ -431,7 +470,10 @@ background-color: #EAEAEA;
   font-size: 13px;
   display:block;
   clear: both;
+  margin-top: 50px;
   margin-bottom: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 footer {

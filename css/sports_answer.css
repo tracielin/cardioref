@@ -468,9 +468,11 @@ background-color: #EAEAEA;
 }
 .foot{
   font-size: 13px;
-  display:inline-block;
+  display:block;
   clear: both;
   margin-bottom: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 footer {
