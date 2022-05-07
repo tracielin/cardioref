@@ -48,6 +48,24 @@ nav a {
     1px 1px 0 #010101; */
 }
 
+nav a.type1{
+  color: #ffffff;
+  background-color:#3b405e;
+}
+nav a.type2{
+  color: #ffffff;
+  background-color:#5e3b5e;
+}
+nav a.type3{
+  color: #ffffff;
+  background-color:#435e3b;
+}
+nav a.type4{
+  color: #ffffff;
+  background-color:#5e3d3b;
+}
+
+
 nav a:hover{
   background: #f6d5e0;
   color: #000000;
