@@ -32,7 +32,7 @@ a.special:hover{
 
 nav a {
   color: #ffffff;
-  background-color: #525252;
+  background-color: #494949;
   width: 10%;
   display: inline-block;
   text-decoration: none;
@@ -72,6 +72,7 @@ nav a:hover{
 }
 .active{
  background: #990033;
+ /* font-weight: bold; */
 }
 
 
@@ -362,6 +363,20 @@ background-color: #CCD4EA;
  float: left;
  margin-left: 6%;
  margin-right: 1%;
+ clear: left;
+}
+#half_left_invisible_alone
+{
+ text-align: center;
+ font-size: 50px;
+ padding-left: 10px;
+ padding-right: 10px;
+ width: 40%;
+ display: inline-block;
+ float: left;
+ margin-left: 6%;
+ margin-right: 1%;
+ clear: both;
 }
 #half_right
 {
@@ -374,6 +389,7 @@ background-color: #CCD4EA;
   float: left;
   margin-right: 6%;
   margin-left: 1%;
+  clear: right;
 }
 
 #third_left
