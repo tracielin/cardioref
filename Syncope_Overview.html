@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <head>
   <meta charset="UTF-8">
- <title>CardioRef: AHA/ACC 2015 Sports Participation Selector Guide: Monomorphic Ventricular Tachycardia</title>
+ <title>CardioRef: AHA/ACC 2015 Sports Participation Selector Guide: Syncope</title>
 
  <link rel="stylesheet" href="css/sports_answer_combined.css">
 
@@ -25,7 +25,7 @@ div{
 <div class="topbar">
   <a href="index.html">Pedi CardioRef</a>
   </div>
-<p class="guideline"><a href="https://www.ahajournals.org/doi/10.1161/CIR.0000000000000245">Reference: ACC/AHA Sports Participation Recommendations (Circulation 2015) Task Force 9</a></p>
+<p class="guideline"><a href="https://www.ahajournals.org/doi/10.1161/CIR.0000000000000245">Reference: ACC/AHA Sports Participation Recommendations (Circulation 2015). Task Force 9: Arrhythmias and Conduction Defects</a></p>
 
 <section style="margin:10px">
   <p class="topspace"></p>
@@ -54,7 +54,7 @@ div{
   <option value="Ebstein">Ebstein Anomaly </option>
   <option value="AnomCoronary">Anomalous Coronary Artery Origin</option>
   <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
-  <option value="PVR">Elevated PVR in CHD </option>
+  <option value="PVR">Pulmonary hypertension in CHD </option>
   <option value="VentricularDysfxn">Ventricular Dysfunction s/p CHD Surgery</option>
   <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
   <option value="Valve_AS">Aortic Stenosis</option>
@@ -65,7 +65,7 @@ div{
   <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
   <option value="HTN">Hypertension </option>
   <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
-  <option value="Marfan">Aortic Diseases and Marfan Syndrome</option>
+  <option value="Marfan">Aortic Diseases, Including Marfan Syndrome</option>
   <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
   <option value="CoronaryOverview">Coronary Artery Disease </option>
   <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
@@ -78,93 +78,82 @@ div{
 
 <label for="spt">participate in</label>
 <select name="sport" id="spt" class="demoInputBox"  onChange="getState();">
-<option value="">*Select Sport*</option>
+<!-- <option value="">*Select Sport*</option> -->
 <option value="_Overview">*Overview*</option>
   </select>?</b>
 <br><br>
 <section id="question">
-Should my patient with <b>Monomorphic Ventricular Tachycardia</b> participate in organized sports?
+Should my patient with <b>Syncope</b> participate in organized sports?
 </section>
-</section>
-<!-- End of 10px margin section. Consider changing template. -->
+  </section>
 <br>
+<section id="needtoknow">
+  <p class="sectiontitle">Should obtain:</p>
+  <ul>
+  <li>History</li>
+  <li>Physical exam</li>
+  <li>ECG</li>
+  <li>+/- Other Tests</li>
+  </ul>
+  <p>"Athletes with syncope should be evaluated with a history, physical examination, ECG,
+    and selective use of other diagnostic tests when there is suspicion of structural heart disease or primary electrical abnormalities
+    that may predispose to recurrent syncope or sudden death (Class I; Level of Evidence C)."</p>
+</section>
 
-<!-- navigation bar for disease sub-categories -->
-<nav>
-  <a href="Afib_Overview.html" >Atrial Fibrillation</a>
-  <a href="Aflutter_Overview.html">Atrial Flutter</a>
-  <a href="SVT_Overview.html">EAT, AVNRT, AVRT, & WPW</a>
-  <a href="PVC_Overview.html">PVCs</a>
-  <a href="NSVT_Overview.html">Non-sustained ventricular tachycardia (NSVT)</a>
-  <a href="VT_mono_Overview.html" class="active">Monomorphic VT, sustained</a>
-  <a href="VT_poly_Overview.html">Polymorphic VT or VF, sustained</a>
-</nav>
+<section id="quarter_invisible">&#8665;</section>
+<section id="quarter_invisible">&#8665;</section>
+<section id="quarter_invisible">&#8664;</section>
+<section id="quarter_invisible">&#8664;</section>
 
+<section id="answer">
 
-<div class="largeanswerbox">
-<h2 align=center>Sustained Monomorphic Ventricular Tachycardia</h2>
-<hr>
-    <section id="needtoknow">
-      <p class="sectiontitle">Need to know:</p>
-      <ul>
-        <li>Structrually normal heart?</li>
-        <li>How long since last VT episode? (> 3 months?)</li>
-        <li>Successful ablation?</li>
-        <li>Suppression with medications?</li>
-      </ul>
-    </section>
+<section id="quarter_left">
+  <p class="sectiontitle">Exercise-induced</p>
+  <p>"Athletes with exercise-induced syncope should be restricted from all competitive athletics
+    until evaluated by a qualified medical professional (Class I; Level of Evidence B)."
+  </p>
+  <div class="verdict_no">No sports until evaluation</div>
+<br>
+</section>
 
-    <p class="arrowsdouble">&#8665; &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#8659; &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#8664;</p>
+<section id="quarter_middleleft">
+<p class="sectiontitle">Structural heart disease</p>
+<p>
+"Athletes with syncope caused by structural heart disease or primary electrical disorders
+should be restricted from athletic activities according to the recommendations for their
+specific underlying cardiovascular condition (Class I; Level of Evidence C)."
+</p>
+<div class="verdict_maybe"><b>See guidelines for their specific condition</b></div><br>
+</section>
 
-    <section id="answer">
+<section id="quarter_middleright">
+<p class="sectiontitle">Neurally-mediated</p>
+<p>"Athletes with neurally mediated syncope can resume all athletic activities
+  once measures are demonstrated to prevent recurrent syncope (Class I; Level of Evidence C)."
+</p>
+<div class="verdict_ok"><b>Can resume after measures prevent recurrent syncope</b></div>
+<br>
+</section>
 
-    <section id="third_left">
-    <p class="sectiontitle">Structrually normal heart, s/p ablation, free of VT >3 months later</p>
-    <p>"Athletes with structurally normal hearts and monomorphic sustained VT amenable to catheter ablation
-      who undergo ablation and remain free of spontaneous or induced VT at least 3 months after the procedure
-      can resume full competitive activities (Class I; Level of Evidence C)."
-    </p>
-    <div class="verdict_ok"><b>Can resume all sports</b> if above conditions met</div>
-    <br>
-    </section>
+<section id="quarter_right">
+<p class="sectiontitle">Unknown cause</p>
+<p>
+"Athletes with syncope of unknown cause, based on a ruling out of structural or molecular pathogenesis,
+should not participate in athletics in which transient loss of consciousness can be hazardous (Class III; Level of Evidence C)."
+</p>
+<div class="verdict_no">No sports where transient LOC can be hazardous</div><br>
+</section>
 
-    <section id="third_middle">
-    <p class="sectiontitle">Structrually normal heart, suppression with medications</p>
-    <p>"Athletes with structurally normal hearts and monomorphic sustained VT who elect to undergo
-      drug suppression with pharmacological therapy should not compete in any sports for at
-      least 3 months after the last VT episode. In the absence of clinical recurrences or
-      inducibility of the arrhythmia by exercise/exercise testing or EPS, all competitive sports may then be permitted
-      (Class I; Level of Evidence C)."
-    </p>
-    <div class="verdict_no"><b>No sports for at least 3 months after last VT episode</b></div><br>
-    <div class="verdict_ok"><b>If no recurrence/inducibility by exercise testing or EP study (> 3 months later), may resume sports</b></div>
-    <br>
-    </section>
-
-    <section id="third_middle">
-    <p class="sectiontitle">Structural heart disease</p>
-    <p>"For the athlete with structural heart disease and sustained monomorphic VT, moderate- and high-intensity competition
-      is contraindicated regardless of apparent therapeutic response, although participation in low-intensity
-      class IA competitive sports is permitted (Class III; Level of Evidence C)."
-    </p>
-    <div class="verdict_ok"><b>IA sports only</b> regardless of apparent suppression of VT</div><br>
-    <div class="verdict_no"><b>Moderate- and high-intensity competition is contraindicated</b></div>
-    <br>
-    </section>
-
-    </section>
-
-</div>
+</section>
 
 <p class="foot">
-  <b>Reference:</b> <a href="https://www.ahajournals.org/doi/10.1161/CIR.0000000000000245"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities: Task Force 9.</a>
-    A Scientific Statement From the AHA and ACC. Circulation 2015</i>
+  <b>Reference:</b> <a href="https://www.ahajournals.org/doi/10.1161/CIR.0000000000000245"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities. Task force 9: Arrhythmias and Conduction Defects.
+    A Scientific Statement From the AHA and ACC.</i></a> <i>Circulation 2015</i>
   <br><br><b>Disclaimer:</b> This website is derived from published guidelines, but does not constitute medical advice nor does it replace clinical judgement. Only the text in quotation marks are direct quotations from the original guidelines. Text not in quotations as well as the method of information display are all that of the website creator and are not part of the original published guidelines. Please consult a physician to discuss any patient-specific matters.
 </p>
 
-
 <footer>
-<p><b>Key:</b> VT = ventricular tachycardia, EPS = electrophysiology study
+<p><b>Key:</b> ECG = electrocardiogram, LOC = loss of consciousness
 </p>
 </footer>
 
@@ -183,6 +172,7 @@ location.href = combo+'.html';
 
     }
 }
+
 function toggle_table() {
   var x = document.getElementById("elaboration");
   if (x.style.display === "block") {
