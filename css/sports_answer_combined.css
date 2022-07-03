@@ -327,6 +327,11 @@ background-color: #CCD4EA;
   width:100%;
   padding: 10px;
 }
+#answer_arrow_section{
+  display: table;
+  width:100%;
+  padding: 10px;
+}
 
 .verdict_ok {
  background: #9fdb61 20px 50%;
