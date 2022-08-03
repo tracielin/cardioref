@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- defines the default zoom for mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <head>
   <meta charset="UTF-8">
- <title>Sports Participation Selector Guide</title>
+   <title>Sports Participation Guide</title>
 
-<!-- top bar -->
-<link rel="stylesheet" href="css/sports.css">
+  <link rel="stylesheet" href="css/sports.css">
 
+  <style>
+  </style>
 
-<style>
-
-
-</style>
 </head>
 
 <body>
+
 <div class="topbar">
   <a href="index.html">Pedi CardioRef</a>
   </div>
 
 
-<div class="navbar" align="center">
+<!-- <div class="navbar">
   <a href="index.html">Home</a>
   <a href="chd.html">CHD</a>
   <a href="acquired.html">Acquired</a>
@@ -33,7 +30,7 @@
   <a href="sports.html">Sports</a>
   <a href="covid.html">COVID-19</a>
   <a href="exercise.html">Exercise</a>
-</div>
+</div> -->
 
 
  <button type="button" class="buttonheader">Sports Participation Recommendations (Circulation 2015)</button>
@@ -42,93 +39,249 @@
 
 
 
-<p class="indent"><label><b>By the ACC/AHA 2015 guidelines, should my patient with</label>
-<select name="disease" id="dz" class="InputBox" onChange="getState();">
-<option value="">*Select Disease*</option>
-<option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
-<option value="HCM">Hypertrophic Cardiomyopathy </option>
-<option value="LVNC">Left Ventricular Non-Compaction </option>
-<option value="DilRestr">Dilated or Restrictive Cardiomyopathy </option>
-<option value="ARVC">Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC) </option>
-<option value="Myo">Myocarditis </option>
-<option value="Peri">Pericarditis </option>
-<option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
-<option value="ASDVSDPDA">ASD, VSD, or PDA </option>
-<option value="PS">Pulmonic Stenosis </option>
-<option value="AS">Aortic Stenosis </option>
-<option value="Coarct">Coarctation </option>
-<option value="Cyan">Cyanotic Heart Disease, unrepaired or with palliative shunt </option>
-<option value="TOF">Tetralogy of Fallot, s/p repair </option>
-<option value="TGA_Must">d-TGA, s/p atrial switch (Mustard/Senning)</option>
-<option value="TGA_Art">d-TGA, s/p arterial switch </option>
-<option value="CCTGA">Congenitally-corrected TGA </option>
-<option value="Fontan">Fontan </option>
-<option value="Ebstein">Ebstein Anomaly </option>
-<option value="AnomCoronary">Anomalous Coronary Artery Origin</option>
-<option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
-<option value="PVR">Elevated PVR in CHD </option>
-<option value="VentricularDysfxn">Ventricular Dysfunction s/p CHD Surgery</option>
-<option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
-<option value="Valve_AS">Aortic Stenosis</option>
-<option value="Valve_AR">Aortic Regurgitation </option>
-<option value="Valve_MS">Mitral Stenosis</option>
-<option value="Valve_MR">Mitral Regurgitation </option>
-<option value="Valve_Hx">History of Cardiac Valve Surgery</option>
-<option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
-<option value="HTN">Hypertension </option>
-<option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
-<option value="Marfan">Aortic Diseases and Marfan Syndrome</option>
-<option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
-<option value="CoronaryOverview">Coronary Artery Disease </option>
-<option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
-<option value="Syncope">Syncope </option>
-<option value="Arrhythmia">Arrhythmias (SVT, PVC, Vtach, etc.) </option>
-<option value="ConductionDefect">Conduction Defects (AV block, brady, pacemaker, RBBB/LBBB)</option>
-<option value="Channelopathies">Channelopathies (LQTS, CPVT, Brugada, etc.) </option>
-<option value="ICD">Implantable Cardioverter-Defibrillator (ICD) </option>
-</select>
+<p class="indent"><b>According to the ACC/AHA 2015 guidelines, should my patient with cardiovascular disease participate in sports?</b></p>
 
-<label>participate in</label>
-<select name="sport" id="spt" class="InputBox"  onChange="getState();">
-<option value="">Select Sport</option>
-<option value="_Overview" selected="selected">*Overview*</option>
-<option value="_Soccer">Soccer</option>
-<option value="_RunLong">Running, long distance</option>
-<option value="_FHock">Field hockey</option>
-<option value="_Yoga">Yoga, Bowling, or Golf</option>
-  <option value="_Cricket">Cricket, Curling, or Riflery</option>
-  </select>?</b></p>
-  <p class="indent">
-  And what do I need to know to make that assessment?</p>
-
-<!--  <p class ="selections">Make selections above for the answer to any [Condition]+[Sport] pairing.</p>
-  <p class="indent">If, instead, you would like to see an overview for a given disease rather than for one specific sport, select "Overview" in the [Sport] field above.</p>
--->
+<p class="indent">And what assessment/testing do I need in order to make that assessment?</p>
 
 
-<!--Reference-->
+
+  <div id="wrapper">
+
+    <div class="container">
+
+      <!-- Search box -->
+      <input type="text" placeholder="Search" id="search">
+
+      <!-- Search results displayed inside these style tags !-->
+      <style id="search-results"></style>
+
+      <!-- Sample data -->
+      <table>
+        <tr>
+          <th>Task Force</th>
+          <th>Disease/Condition</th>
+          <th>Additional Information</th>
+        </tr>
+        <tr class="searchable" data-index="hcm hocm hypertrophic cardiomyopathy">
+          <td>Task Force 3</td>
+          <td><a href="HCM_Overview.html">Hypertrophic Cardiomyopathy</a></td>
+          <td>longer extra thing</td>
+        </tr>
+        <tr class="searchable" data-index="lvnc lv noncompaction non-compaction cardiomyopathy">
+          <td>Task Force 3</td>
+          <td><a href="LVNC_Overview.html">LV Non-Compaction</a></td>
+          <td>item</td>
+        </tr>
+        <tr class="searchable" data-index="dilated cardiomyopathy">
+          <td>Task Force 3</td>
+          <td><a href="DilRestr_Overview.html">Dilated Cardiomyopathy</a></td>
+         <td></td>
+        </tr>
+
+         <tr class="searchable" data-index="restrictive cardiomyopathy">
+          <td>Task Force 3</td>
+          <td><a href="DilRestr_Overview.html">Restrictive Cardiomyopathy</a></td>
+          <td></td>
+        </tr>
+
+        <tr class="searchable" data-index="arvd arvc cardiomyopathy arrhythmogenic right ventricular">
+          <td>Task Force 3</td>
+          <td><a href="ARVC_Overview.html">Arrhythmogenic RV Cardiomyopathy</a></td>
+          <td></td>
+        </tr>
+
+          <tr class="searchable" data-index="myocarditis">
+          <td>Task Force 3</td>
+          <td><a href="Myo_Overview.html">Myocarditis</a></td>
+            <td></td>
+        </tr>
+
+          <tr class="searchable" data-index="pericarditis">
+          <td>Task Force 3</td>
+          <td><a href="Peri_Overview.html">Pericarditis</a></td>
+           <td></td>
+        </tr>
+
+        <tr class="searchable" data-index="asd vsd pda atrial septal defect ventricular patent ductus arteriosus">
+          <td>Task Force 4</td>
+          <td><a href="ASDVSDPDA_Overview.html">ASD, VSD, or PDA</a></td>
+          <td></td>
+        </tr>
+         <tr class="searchable" data-index="pulmonary stenosis ps">
+          <td>Task Force 4</td>
+          <td><a href="PS_Overview.html">Pulmonary Stenosis</a></td>
+          <td></td>
+        </tr>
+         <tr class="searchable" data-index="aortic stenosis as">
+          <td>Task Force 4</td>
+          <td><a href="AS_Overview.html">Aortic Stenosis</a></td>
+          <td></td>
+        </tr>
+
+        <tr class="searchable" data-index="coarctation aorta">
+         <td>Task Force 4</td>
+         <td><a href="Coarct_Overview.html">Coarctation of the Aorta</a></td>
+         <td></td>
+       </tr>
+
+       <tr class="searchable" data-index="cyanotic palliative bt sano tof tetralogy fallot ps pa atresia tricuspid mitral aortic pulmonary dorv single dilv double norwood damus dks shunt blalock taussig thomas btt">
+        <td>Task Force 4</td>
+        <td><a href="Cyan_Overview.html">Cyanotic Heart Disease, unrepaired or with palliative shunt</a></td>
+        <td></td>
+      </tr>
+
+      <tr class="searchable" data-index="tetralogy of fallot tof">
+       <td>Task Force 4</td>
+       <td><a href="TOF_Overview.html">Tetralogy of Fallot, s/p repair</a></td>
+       <td></td>
+     </tr>
+
+     <tr class="searchable" data-index="dtga transposition great arteries d-tga atrial switch mustard senning">
+      <td>Task Force 4</td>
+      <td><a href="TGA_Must_Overview.html">d-TGA, s/p atrial switch (Mustard/Senning)</a></td>
+      <td></td>
+    </tr>
+
+    <tr class="searchable" data-index="dtga d-tga arterial switch aso jatene">
+     <td>Task Force 4</td>
+     <td><a href="TGA_Art_Overview.html">d-TGA, s/p arterial switch</a></td>
+     <td></td>
+   </tr>
+
+   <tr class="searchable" data-index="cctga congenitally corrected transposition of the great arteries">
+    <td>Task Force 4</td>
+    <td><a href="CCTGA_Overview.html">Congenitally-corrected TGA</a></td>
+    <td></td>
+  </tr>
+
+  <tr class="searchable" data-index="fontan single ventricle dorv unbalanced dilv tof">
+   <td>Task Force 4</td>
+   <td><a href="Fontan_Overview.html">Fontan</a></td>
+   <td></td>
+ </tr>
+
+ <tr class="searchable" data-index="ebstein's anomaly tricuspid">
+  <td>Task Force 4</td>
+  <td><a href="Ebstein_Overview.html">Ebstein Anomaly</a></td>
+  <td></td>
+</tr>
+
+<tr class="searchable" data-index="anomalous coronary artery origin alcapa arcapa left right">
+ <td>Task Force 4</td>
+ <td><a href="AnomCoronary_Overview.html">Anomalous Coronary Artery Origin</a></td>
+ <td>Includes ALCAPA, ARCAPA, and other anomalous coronary origins</td>
+</tr>
+
+<tr class="searchable" data-index="pvr pulmonary hypertension pulmonary arterial hypertension">
+ <td>Task Force 4</td>
+ <td><a href="PVR_Overview.html">Elevated PVR in Congenital Heart Disease</a></td>
+ <td></td>
+</tr>
+
+<tr class="searchable" data-index="ventricular dysfunction surgery myocardial dysfunction reduced hfref hfpef">
+<td>Task Force 4</td>
+<td><a href="VentricularDysfxn_Overview.html">Ventricular Dysfunction s/p CHD Surgery</a></td>
+<td></td>
+</tr>
+
+<tr class="searchable" data-index="valvar aortic stenosis as valve">
+ <td>Task Force 4</td>
+ <td><a href="Valve_AS_Overview.html">Aortic Stenosis</a></td>
+ <td></td>
+</tr>
+
+<tr class="searchable" data-index="valvar aortic regurgitation ar ai aortic insufficiency valve">
+<td>Task Force 4</td>
+<td><a href="Valve_AR_Overview.html">Aortic Regurgitation</a></td>
+<td></td>
+</tr>
+
+<tr class="searchable" data-index="valve valvar mitral stenosis ms">
+ <td>Task Force 4</td>
+ <td><a href="Valve_MS_Overview.html">Mitral Stenosis</a></td>
+ <td></td>
+</tr>
+
+<tr class="searchable" data-index="valve valvar mitral regurgitation mitral insufficiency mr">
+<td>Task Force 4</td>
+<td><a href="Valve_MR_Overview.html">Mitral Regurgitation</a></td>
+<td></td>
+
+<tr class="searchable" data-index="valve replacement mechanical bioprosthetic artificial anticoagulation warfarin coumadin">
+<td>Task Force 4</td>
+<td><a href="Valve_Hx_Overview.html">History of Cardiac Valve Surgery</a></td>
+<td></td>
+
+<tr class="searchable" data-index="hypertension htn">
+<td>Task Force 4</td>
+<td><a href="HTN_Overview.html">Hypertension</a></td>
+<td></td>
+
+<tr class="searchable" data-index="marfan aortic dissection ehlers-danlos ehlers danlos bicuspid aortic valve thoracic aortic aneurysm loeys-dietz loeys dietz">
+<td>Task Force 7</td>
+<td><a href="Marfan_Overview.html">Aortic Diseases and Marfan Syndrome</a></td>
+<td>Includes bicuspid aortic valve, Ehlers-Danlos, Loeys-Dietz, Marfan syndrome, aortic aneurysms and dissection, non-syndromic/non-familial enlarged aorta</td>
+
+<tr class="searchable" data-index="coronary artery disease">
+<td>Task Force 4</td>
+<td><a href="CoronaryOverview_Overview.html">Coronary Artery Disease</a></td>
+<td></td>
+
+<tr class="searchable" data-index="syncope faint">
+<td>Task Force 4</td>
+<td><a href="_Overview.html">Syncope</a></td>
+<td></td>
+
+<tr class="searchable" data-index="rhythm arrhythmia aicd svt pvc pac vtach vt vfib ventricular tachycardia supraventricular avnrt avrt pjrt">
+<td>Task Force 4</td>
+<td><a href="Arrhythmia_Overview.html">Arrhythmias (SVT, PVC, Vtach, etc.)</a></td>
+<td></td>
+
+<tr class="searchable" data-index="rhythm arrhythmia prolonged pr interval second degree third degree complete heart block conduction defect av block bradycardia pacemaker pacer right bundle branch block left bundle rbbb lbbb">
+<td>Task Force 4</td>
+<td><a href="ConductionDefect_Overview.html">Conduction Defects</a></td>
+<td>Includes permanent pacemakers, sinus bradycardia, 1st/2nd/3rd-degree AV block (congenital or acquired), complete RBBB, complete LBBB</td>
+
+<tr class="searchable" data-index="rhythm arrhythmia channelopathies long QT syndrome lqts catecholaminergic polymorphic ventricular tachycardia cpvt brugada aicd nsvt">
+<td>Task Force 4</td>
+<td><a href="Channelopathies_Overview.html">Channelopathies</a></td>
+<td>Includes Long QT syndrome, CPVT, Brugada, etc.</td>
+
+<tr class="searchable" data-index="rhythm arrhythmia ventricular tachycardia aicd vt nsvt">
+<td>Task Force 4</td>
+<td><a href="ICD_Overview.html">Implantable Cardioverter-Defibrillator (ICD)</a></td>
+<td></td>
+
+</tr>
+
+<!--
+              <tr class="searchable" data-index="coronary">
+          <td>Task Force 6</td>
+          <td>Hidden description</td>
+          <td></td>
+        </tr> -->
+
+
+      </table>
+  <!--     <br>
+      <table>
+          <tr class="hidden" data-index="hidden">
+          <td>Not found</td>
+        </tr>
+      </table> -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /#wrapper -->
+
 <p></p><br><br>
 <p class="indent"> <span style="font-size:13px;font-weight: bold;">Reference: <a href="https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000000236"><i>Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities.
   A Scientific Statement From the AHA and ACC.</i></a>
     <span style="font-size:12px;font-weight:"><i>Circulation 2015</i></p>
 
+<script src="js/js_sports.js"></script>
 </body>
 
-<script>
 
-
-function getState() {
-    var disease = document.getElementById("dz").value;
-    var sport = document.getElementById("spt").value;
-    if(disease && sport) {
-      console.log(disease);
-      console.log(sport);
-      console.log(disease+sport);
-      combo=disease+sport;
-location.href = combo+'.html';
-
-    }
-}
-  </script>
 
 </html>
