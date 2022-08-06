@@ -49,7 +49,11 @@ font-weight:bold;
  color: #333333;
  width: 80%;}
 
-
+/* .categorytitle {
+  font-size: 14px;
+  line-height: 2px;
+  font-weight: bold;
+} */
 
 
 /* */
@@ -139,7 +143,6 @@ font-weight:bold;
 .hidden{
   display: none;
 }
-
 div.container {
   width: 1000px;
   margin: 0px auto;
@@ -160,8 +163,37 @@ div.container table {
 }
 div.container table tr:nth-child(2), tr:nth-child(3), tr:nth-child(4),
 tr:nth-child(5),tr:nth-child(6), tr:nth-child(7), tr:nth-child(8)   {
-  background: #bacfe5;
+  background: #d9def8;
 }
+div.container table tr:nth-child(9), tr:nth-child(10), tr:nth-child(11),
+tr:nth-child(12),tr:nth-child(13), tr:nth-child(14), tr:nth-child(15), tr:nth-child(16),
+tr:nth-child(17), tr:nth-child(18),
+tr:nth-child(19),tr:nth-child(20), tr:nth-child(21), tr:nth-child(22)    {
+  background: #c2d4dd;
+}
+div.container table tr:nth-child(23), tr:nth-child(24), tr:nth-child(25),
+tr:nth-child(26),tr:nth-child(27) {
+  background: #f1e3dd;
+}
+
+div.container table tr:nth-child(28)  {
+  background: #d9ecd0;
+}
+div.container table tr:nth-child(29)  {
+  background: #c0ded9;
+}
+div.container table tr:nth-child(30)    {
+  background: #e4d1d1;
+}
+
+div.container table tr:nth-child(31), tr:nth-child(32),
+tr:nth-child(33),tr:nth-child(34)    {
+  background: #eaece5;
+}
+div.container table tr:nth-child(35)    {
+  background: #b2c2bf;
+}
+
 div.container table th {
   padding: 5px 0;
   border-bottom: 1px solid;
@@ -170,12 +202,15 @@ div.container table th {
   line-height: 17px;
 }
 div.container table td {
-  padding: 2px 0;
+  padding: 0px 0;
   text-align: center;
   border-bottom: 1px solid;
 }
 td:first-child {
   font-size: 13px;
+}
+td:nth-child(2){
+  font-size: 16px;
 }
 td:nth-child(3) {
   font-size: 13px;
@@ -195,6 +230,7 @@ tbody tr td:nth-child(2) {
   max-width: 200px;
   /* word-break: break-all; */
   padding: 0px 4px;
+  line-height: 18px;
 }
 thead tr th:nth-child(3),
 tbody tr td:nth-child(3) {
@@ -216,9 +252,10 @@ td a {
   font-weight: bold;
 }
 td a:hover {
-  background: blue;
+  background: #ba0441;
   color: white;
   text-decoration: none;
+  text-shadow: 2px 0 0 #ba0441, 0 -2px 0 #ba0441, 0 2px 0 #ba0441, -2px 0 0 #ba0441;
 }
 td a:active {
   background: blue;
