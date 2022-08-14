@@ -1,4 +1,4 @@
-html, body {margin:0; padding: 0; font-family: sans-serif; overflow:hidden;}
+html, body {margin:0; padding: 0; font-family: sans-serif; max-width: 100%; overflow:hidden;}
 
 .hidden{
        display:none;
@@ -17,7 +17,7 @@ html, body {margin:0; padding: 0; font-family: sans-serif; overflow:hidden;}
 
 #elaboration {
   width: 100vw;
-    max-width: 100%;
+  max-width: 100%;
   padding: 10px 0;
   text-align: center;
  background: #DDE0FB;
@@ -27,7 +27,8 @@ margin-top: -2px;
 }
 .largeanswerbox{
   display: block;
-  width: 96vw;
+  width: 100vw;
+  max-width: 100%;
   margin: auto;
   /* margin-left: 10px;
   margin-right: 10px; */
@@ -104,6 +105,7 @@ nav a:hover{
 }
 .tabs{
     width: 90vw;
+    max-width: 90%;
     display: block;
     margin: 50px auto;
     position: relative;
@@ -139,6 +141,7 @@ margin-bottom: 800px;
     z-index: 0;/* or display: none; */
     overflow: hidden;
     width: 95vw;
+    max-width: 95%;
     padding: 25px;
     position: absolute;
     top: 30px;
@@ -197,11 +200,11 @@ p.selections{
 }
 
 .guideline {
-  overflow:hidden;
-   position: fixed;
-   top: 25px;
-   width:100vw;
-     max-width: 100%;
+ overflow:hidden;
+ position: fixed;
+ top: 25px;
+ width:100vw;
+ max-width: 100%;
  background-color: #004b62;
  text-align: left;
  z-index: 2;
@@ -220,7 +223,7 @@ p.selections{
   font-weight: bold;
   border: 3px solid #a3a3a3;
   width: 100vw;
-    max-width: 100%;
+  max-width: 100%;
 }
 .guideline a:hover {
  background: #bbb;
@@ -249,6 +252,8 @@ overflow:hidden;
 }
 
 .topbar a {
+  width:100vw;
+    max-width: 100%;
  float: center;
  display: block;
  color: #f2f2f2;
@@ -273,6 +278,8 @@ overflow:hidden;
 
 /* Navigation menu bar */
 .navbar {
+  width:100vw;
+    max-width: 100%;
  background-color: #347;
  position: fixed;
  bottom: 0;
@@ -282,6 +289,8 @@ overflow:hidden;
 }
 
 .navbar a {
+  width:100vw;
+    max-width: 100%;
  display: inline-block;
  color: #f2f2f2;
  text-align: center;
@@ -328,25 +337,23 @@ border: 2px solid #455EA4;
 background-color: #CCD4EA;
  padding:2px 20px;
  margin: auto;
- width: 380px;
+ max-width: 380px;
  display: block;
 }
 #answer{
   display: table;
-  width:99%;
-  padding: 10px;
+  width:100vw;
+  max-width: 100%;
 }
 #answer_arrow_section{
   display: table;
   /* width:100vw; */
   min-width: 90%;
    max-width:100%;
-  padding: 10px;
     font-size:90px;
     text-align: center;
     margin: 0px;
   }
-}
 
 .verdict_ok {
  background: #9fdb61 20px 50vw;
@@ -420,12 +427,12 @@ background-color: #EAEAEA;
 .half_left{
   border: 2px solid #454545;
   background-color: #EAEAEA;
- padding-left: 10px;
- padding-right: 10px;
+ padding-left: 2vw;
+ padding-right: 2vw;
  width: 40vw;
  display: inline-block;
  float: left;
- margin-left: 5vw;
+ margin-left: 4vw;
  margin-right: 1vw;
  clear: left;
 }
@@ -433,12 +440,12 @@ background-color: #EAEAEA;
 .half_left_invisible
 {
  text-align: center;
- padding-left: 10px;
- padding-right: 10px;
+ padding-left: 1vw;
+ padding-right: 1vw;
  width: 40vw;
  display: inline-block;
  float: left;
- margin-left: 5vw;
+ margin-left: 4vw;
  margin-right: 1vw;
  clear: left;
 }
@@ -447,20 +454,20 @@ background-color: #EAEAEA;
 {
  text-align: center;
  font-size: 50px;
- padding-left: 10px;
- padding-right: 10px;
+ padding-left: 1vw;
+ padding-right: 1vw;
  width: 40vw;
  display: inline-block;
  float: left;
- margin-left: 5vw;
+ margin-left: 4vw;
  margin-right: 1vw;
  clear: both;
 }
 .half_right{
   border: 2px solid #454545;
   background-color: #EAEAEA;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 2vw;
+  padding-right: 2vw;
   width: 40vw;
   display: inline-block;
   float: left;
@@ -471,8 +478,8 @@ background-color: #EAEAEA;
 .half_right_invisible
 {
  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1vw;
+  padding-right: 1vw;
   width: 40vw;
   display: inline-block;
   float: left;
