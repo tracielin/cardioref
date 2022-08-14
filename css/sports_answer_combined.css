@@ -1,8 +1,23 @@
-html, body {margin:0; padding: 0; font-family: sans-serif; max-width: 100%; overflow:hidden;}
+html, body {margin:0; padding: 0; font-family: sans-serif; overflow-x:hidden;}
+
+/* @media screen and (min-width:500px){} */
 
 .hidden{
        display:none;
     }
+
+.buttonheader{
+ background-color: #004b62;
+ color: white;
+ padding: 14px;
+ width: 100%;
+ border: none;
+ text-align: left;
+ outline: none;
+font-size: 16px;
+font-weight:bold;
+}
+
 
 #showtable{
  font-size:16px;
@@ -199,41 +214,6 @@ p.selections{
   padding: 0px;
 }
 
-.guideline {
- overflow:hidden;
- position: fixed;
- top: 25px;
- width:100vw;
- max-width: 100%;
- background-color: #004b62;
- text-align: left;
- z-index: 2;
-}
-
-.guideline a{
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: left;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  padding-right: 9px;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  border: 3px solid #a3a3a3;
-  width: 100vw;
-  max-width: 100%;
-}
-.guideline a:hover {
- background: #bbb;
- color: black;
-}
-.guideline a:focus {
- background: #bbb;
- color: black;
-}
-
 select {
   font-size: 16px;
 }
@@ -242,29 +222,27 @@ select {
 
 /* Floating Header */
 .topbar {
-overflow:hidden;
+ overflow:hidden;
  background-color: #347;
  position: fixed;
  top: 0;
- width:100vw;
-   max-width: 100%;
-   z-index: 2;
+ width: 100%;
+ max-width: 100%;
+ z-index: 2;
 }
 
 .topbar a {
-  width:100vw;
-    max-width: 100%;
  float: center;
  display: block;
  color: #f2f2f2;
  text-align: center;
- padding: 9px;
+ padding: 9px 0px 9px 0px;
  text-decoration: none;
  font-size: 16px;
  font-family: Arial;
  font-weight: bold;
- border-style: solid;
- border-color: #a3a3c2;
+ border-bottom: 2px solid #a3a3c2;
+  border-top: 2px solid #a3a3c2;
 }
 
 .topbar a:hover {
@@ -275,6 +253,30 @@ overflow:hidden;
  background: #ddd;
  color: black;
 }
+
+
+.guidelinebar a{
+ background-color: #004b62;
+ color: #f2f2f2;
+ padding: 9px;
+ width: 100%;
+ border: none;
+ text-align: left;
+ outline: none;
+font-size: 12px;
+font-weight:bold;
+text-decoration: none;
+}
+
+.guidelinebar a:hover {
+ background: #bbb;
+ color: black;
+}
+.guidelinebar a:focus {
+ background: #bbb;
+ color: black;
+}
+
 
 /* Navigation menu bar */
 .navbar {
@@ -763,18 +765,31 @@ background-color: #EAEAEA;
    margin-left: 10px;
    margin-right: 10px;
  }
- footer {
-   display:block;
-   width: 100%;
-   min-width: 100%;
-  max-width:100%;
+ .key {
+   overflow:hidden;
+   background-color: #347;
+   /* display:block; */
+   width: 100vw;
+   max-width:100%;
    position: fixed;
    bottom: 0;
-   background-color: #347;
-   color: white;
+   z-index: 2;
+
+   color: #f2f2f2;
    border: 2px solid #a3a3c2;
    font-size: 13px;
-   padding: 0px 10px;
+   padding: 0px;
    clear: both;
-   z-index: 2;
+
  }
+ /* float: center;
+ display: block;
+ color:
+ text-align: center;
+ padding: 9px;
+ text-decoration: none;
+ font-size: 16px;
+ font-family: Arial;
+ font-weight: bold;
+ border-style: solid;
+ border-color: #a3a3c2; */
