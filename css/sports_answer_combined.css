@@ -1,4 +1,4 @@
-body {margin:0; font-family: sans-serif; width:100vw }
+html, body {margin:0; padding: 0; font-family: sans-serif; overflow:hidden;}
 
 .hidden{
        display:none;
@@ -12,10 +12,12 @@ body {margin:0; font-family: sans-serif; width:100vw }
  border-radius: 10px;
  padding: 5px;
  width: 100vw;
+ max-width: 100%;
 }
 
 #elaboration {
   width: 100vw;
+    max-width: 100%;
   padding: 10px 0;
   text-align: center;
  background: #DDE0FB;
@@ -96,6 +98,7 @@ nav a:hover{
  .multi { /*didn't work to block reference to bottom. probably because need to pick a div size that isn't percentage */
   display: block;
   width: 100vw;
+  max-width: 100%;
   height: 100vw;
   background: blue;
 }
@@ -198,8 +201,8 @@ p.selections{
    position: fixed;
    top: 25px;
    width:100vw;
+     max-width: 100%;
  background-color: #004b62;
- width:100vw;
  text-align: left;
  z-index: 2;
 }
@@ -217,6 +220,7 @@ p.selections{
   font-weight: bold;
   border: 3px solid #a3a3a3;
   width: 100vw;
+    max-width: 100%;
 }
 .guideline a:hover {
  background: #bbb;
@@ -240,6 +244,7 @@ overflow:hidden;
  position: fixed;
  top: 0;
  width:100vw;
+   max-width: 100%;
    z-index: 2;
 }
 
@@ -333,7 +338,9 @@ background-color: #CCD4EA;
 }
 #answer_arrow_section{
   display: table;
-  width:100vw;
+  /* width:100vw; */
+  min-width: 90%;
+   max-width:100%;
   padding: 10px;
     font-size:90px;
     text-align: center;
@@ -751,7 +758,9 @@ background-color: #EAEAEA;
  }
  footer {
    display:block;
-   width: 100vw;
+   width: 100%;
+   min-width: 100%;
+  max-width:100%;
    position: fixed;
    bottom: 0;
    background-color: #347;
