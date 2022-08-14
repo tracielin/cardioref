@@ -4,19 +4,42 @@
 <!-- defines the default zoom for mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
  <title>CardioRef Main Page</title>
- 
- <!-- CardioRef top home bar -->
- <link rel="stylesheet" href="css/topbar.css">
- 
+
+
 <style>
 
  body {margin:0;}
+
+ .topbar {
+  overflow:hidden;
+  background-color: #347;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 2;
+ }
+
+ .topbar a {
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 9px 0px 9px 0px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Arial;
+  font-weight: bold;
+  border-bottom: 2px solid #a3a3c2;
+   border-top: 2px solid #a3a3c2;
+ }
+
 .mainfont {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   text-align:center;
   }
- 
+
 
 /* Navigation menu bar */
 .navbar {
@@ -50,7 +73,7 @@
   width: 90%;
  max-width: 500px;
 }
-  
+
 .button {
   padding: 15px 0px;
   text-align: center;
@@ -105,26 +128,26 @@
   border: none;
   color: white;
   width: 100%;
-  }  
+  }
 .button8 {
   background-color: #57366D;
   border: none;
   color: white;
   width: 100%;
-  } 
+  }
  .button9 {
   background-color: #D55D61;
   border: none;
   color: white;
   width: 100%;
-  } 
- 
+  }
+
 .button:hover {
   background-color: #909090;
   color: white;
-}  
-  
-  
+}
+
+
 </style>
 </head>
 
@@ -132,8 +155,8 @@
 <div class="topbar">
   <a href="index.html">Pedi CardioRef</a>
   </div>
-  
-  
+
+
 <div class="navbar">
   <a href="about.html">About</a>
   <a href="disclaimer.html">Disclaimers</a>
