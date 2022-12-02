@@ -43,7 +43,7 @@
 
 
 <p class="indent"><label><b>By the ACC/AHA 2015 guidelines, should my patient with</label>
-<select name="disease" id="dz" class="demoInputBox" onChange="getState();">
+<select name="disease" id="dz" class="demoInputBox" onChange="goThere();">
 <option value="">Select Disease</option>
 <option value="HCM">Hypertrophic Cardiomyopathy </option>
 <option value="LVNC">LV Non-Compaction </option>
@@ -51,7 +51,7 @@
   </select>
 
 <label>participate in</label>
-<select name="sport" id="spt" class="demoInputBox"  onChange="getState();">
+<select name="sport" id="spt" class="demoInputBox"  onChange="goThere();">
 <option value="">Select Sport</option>
 <option value="Overview">Overview</option>
 <option value="_Soccer">Soccer</option>
@@ -77,6 +77,11 @@
 </body>
 
 <script>
+
+function goThere(){
+  var disease = document.getElementById("dz").value;
+  location.href= disease+'_Overview.html';
+}
 
 function getState() {
     var disease = document.getElementById("dz").value;

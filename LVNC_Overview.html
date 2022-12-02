@@ -9,6 +9,27 @@
 
  <link rel="stylesheet" href="css/sports_answer_combined.css">
 
+ <script>
+
+ function goThere(){
+   var disease = document.getElementById("dz").value;
+   console.log(disease);
+   location.href= disease+'_Overview.html';
+ }
+
+ function getState() {
+     var disease = document.getElementById("dz").value;
+     var sport = document.getElementById("spt").value;
+     if(disease && sport) {
+       console.log(disease);
+       console.log(sport);
+       console.log(disease+sport);
+       combo=disease+sport;
+       location.href = combo+'.html';
+     }
+    }
+   </script>
+
 <style>
 div{
     -webkit-margin-before:0;
@@ -36,7 +57,7 @@ div{
   <p class="topspace"></p>
 
 <label><b>By the ACC/AHA 2015 guidelines, should my patient with</label>
-  <select name="disease" id="dz" class="InputBox" onChange="getState();">
+  <select name="disease" id="dz" class="InputBox" onChange="goThere();">
   <option value="">*Select Disease*</option>
   <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
   <option value="HCM">Hypertrophic Cardiomyopathy </option>
@@ -81,11 +102,8 @@ div{
   <option value="ICD">Implantable Cardioverter-Defibrillator (ICD) </option>
   </select>
 
-<label for="spt">participate in</label>
-<select name="sport" id="spt" class="demoInputBox"  onChange="getState();">
-<option value="">*Select Sport*</option>
-<option value="_Overview" selected="selected">*Overview*</option>
-  </select>?</b>
+<span>participate in organized sports?</span>
+
 <br><br>
 <section id="question">
 Should my patient with <b>Left Ventricular Non-Compaction</b> participate in competitive sports?
@@ -140,6 +158,12 @@ Should my patient with <b>Left Ventricular Non-Compaction</b> participate in com
 <!-- <script src="leader-line.min.js"></script> -->
 <script>
 
+function goThere(){
+  var disease = document.getElementById("dz").value;
+  console.log(disease);
+  location.href= disease+'_Overview.html';
+}
+
 function getState() {
     var disease = document.getElementById("dz").value;
     var sport = document.getElementById("spt").value;
@@ -148,11 +172,9 @@ function getState() {
       console.log(sport);
       console.log(disease+sport);
       combo=disease+sport;
-location.href = combo+'.html';
-
+      location.href = combo+'.html';
     }
 }
-
   </script>
 
 </html>

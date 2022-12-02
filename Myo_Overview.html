@@ -36,7 +36,7 @@ div{
   <p class="topspace"></p>
 
 <label><b>By the ACC/AHA 2015 guidelines, should my patient with</label>
-  <select name="disease" id="dz" class="InputBox" onChange="getState();">
+  <select name="disease" id="dz" class="InputBox" onChange="goThere();">
   <option value="">*Select Disease*</option>
   <option value ="" class="dropdown-divider">---------------------------------------------------------------</option>
   <option value="HCM">Hypertrophic Cardiomyopathy </option>
@@ -82,7 +82,7 @@ div{
   </select>
 
 <label for="spt">participate in</label>
-<select name="sport" id="spt" class="demoInputBox"  onChange="getState();">
+<select name="sport" id="spt" class="demoInputBox"  onChange="goThere();">
 <option value="">*Select Sport*</option>
 <option value="_Overview" selected="selected">*Overview*</option>
   </select>?</b>
@@ -110,8 +110,12 @@ Should my patient with <b>myocarditis</b> participate in organized sports?
     and an exercise ECG no less than 3 to 6 months after the initial illness (Class I; Level of Evidence C)"</p>
 </section>
 
-<p class="arrows">&#11019 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &#11018;</p>
-
+<section id="answer">
+  <section id="answer_arrow_section">
+    <section class="half_left_invisible">&#11019;</section>
+    <section class="half_right_invisible">&#11018;</section>
+  </section>
+  
 <section id="answer">
 <section class="half_left">
 <p class="sectiontitle">Active inflammation present</p>
@@ -155,6 +159,11 @@ echo = echocardiogram, CMR = cardiac MRI
 </section>
 
 <script>
+
+function goThere(){
+  var disease = document.getElementById("dz").value;
+  location.href= disease+'_Overview.html';
+}
 
 function getState() {
     var disease = document.getElementById("dz").value;
