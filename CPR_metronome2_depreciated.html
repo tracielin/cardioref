@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metronome with default sound</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="startStopButton">Start</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      let isPlaying = false;
+      let interval;
+
+      function playTone() {
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = 'sine'; // You can change the type to 'square', 'sawtooth', or 'triangle'
+        oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // Set the initial frequency
+        oscillator.connect(audioContext.destination);
+        oscillator.start();
+        oscillator.stop(audioContext.currentTime + 0.1); // Stop after 0.1 seconds
+      }
+
+      function startStopMetronome() {
+        if (isPlaying) {
+          clearInterval(interval);
+          isPlaying = false;
+          document.getElementById('startStopButton').innerText = 'Start';
+        } else {
+          const bpm = 110;
+          const intervalMs = (60 / bpm) * 1000; // Calculate the interval in milliseconds
+          playTone(); // Play the first tone immediately
+          interval = setInterval(playTone, intervalMs);
+          isPlaying = true;
+          document.getElementById('startStopButton').innerText = 'Stop';
+        }
+      }
+
+      document.getElementById('startStopButton').addEventListener('click', startStopMetronome);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metronome with sound of my choosing, at 110 bpm</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="startStopButton">Start</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      let isPlaying = false;
+      let interval;
+
+      function playAudioFile() {
+        const audio = new Audio('sounds/metronome-click.wav'); // Replace with the path to your audio file
+        audio.play();
+      }
+
+      function startStopMetronome() {
+        if (isPlaying) {
+          clearInterval(interval);
+          isPlaying = false;
+          document.getElementById('startStopButton').innerText = 'Start';
+        } else {
+          const bpm = 110;
+          const intervalMs = (60 / bpm) * 1000; // Calculate the interval in milliseconds
+          playAudioFile(); // Play the audio file immediately
+          interval = setInterval(playAudioFile, intervalMs);
+          isPlaying = true;
+          document.getElementById('startStopButton').innerText = 'Stop';
+        }
+      }
+
+      document.getElementById('startStopButton').addEventListener('click', startStopMetronome);
+    });
+  </script>
+</body>
+</html>
